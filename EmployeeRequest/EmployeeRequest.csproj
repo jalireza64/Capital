@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E424718-D490-4767-A1AF-5875DF588CD2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmployeeRequest</RootNamespace>
+    <AssemblyName>EmployeeRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews Condition="'$(Configuration)'=='Debug'">false</MvcBuildViews>
+    <MvcBuildViews Condition="'$(Configuration)'=='Release'">true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>1399</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.5</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceId, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeviceId.4.4.0\lib\net40\DeviceId.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\..\..\EtsPresentation\Web\SharedResources\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc.resources">
+      <HintPath>..\..\..\EtsPresentation\Web\SharedResources\Kendo.Mvc.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Mvc, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Report.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\T4MVCExtensions.4.0.0\lib\net45\T4MVCExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebPush, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebPush.1.0.11\lib\net45\WebPush.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Capital.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Capital.edmx</DependentUpon>
+      <LastGenOutput>Capital.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Capital.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Capital.edmx</DependentUpon>
+      <LastGenOutput>Capital.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClientApp\assets\stimulsoft\css\demo.css" />
+    <Content Include="ClientApp\assets\stimulsoft\css\stimulsoft.designer.office2013.whiteblue.css" />
+    <Content Include="ClientApp\assets\stimulsoft\css\stimulsoft.viewer.office2013.whiteblue.css" />
+    <Content Include="ClientApp\assets\stimulsoft\demo.html" />
+    <Content Include="ClientApp\assets\stimulsoft\images\BarCodes.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\favicon.ico" />
+    <Content Include="ClientApp\assets\stimulsoft\images\HighlightCondition.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\Images.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\Js.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\JsBack.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\MasterDetail.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\ParametersDetailedCategories.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\ParametersDetailedOrders.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\ParametersHighlightCondition.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\ParametersInvoice.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\ParametersSelectingCountry.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\Shapes.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\SimpleList.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\StimulsoftReports.png" />
+    <Content Include="ClientApp\assets\stimulsoft\images\TwoSimpleLists.png" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\BarCodes.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\HighlightCondition.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\Images.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\MasterDetail.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\ParametersDetailedCategories.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\ParametersDetailedOrders.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\ParametersHighlightCondition.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\ParametersInvoice.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\ParametersSelectingCountry.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\Shapes.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\SimpleList.js" />
+    <Content Include="ClientApp\assets\stimulsoft\reports\TwoSimpleLists.js" />
+    <Content Include="ClientApp\assets\stimulsoft\scripts\stimulsoft.designer.js" />
+    <Content Include="ClientApp\assets\stimulsoft\scripts\stimulsoft.reports.js" />
+    <Content Include="ClientApp\assets\stimulsoft\scripts\stimulsoft.viewer.js" />
+    <Content Include="ClientApp\assets\kendo.messages.fa-IR.js" />
+    <Content Include="content\appIcon.png" />
+    <Content Include="content\fontAwsome\js\all.js" />
+    <Content Include="content\fontAwsome\js\all.min.js" />
+    <Content Include="content\fontAwsome\js\brands.js" />
+    <Content Include="content\fontAwsome\js\brands.min.js" />
+    <Content Include="content\fontAwsome\js\fontawesome.js" />
+    <Content Include="content\fontAwsome\js\fontawesome.min.js" />
+    <Content Include="content\fontAwsome\js\regular.js" />
+    <Content Include="content\fontAwsome\js\regular.min.js" />
+    <Content Include="content\fontAwsome\js\solid.js" />
+    <Content Include="content\fontAwsome\js\solid.min.js" />
+    <Content Include="content\fontAwsome\js\v4-shims.js" />
+    <Content Include="content\fontAwsome\js\v4-shims.min.js" />
+    <Content Include="content\error.css" />
+    <Content Include="content\reportLocalization\fa.xml" />
+    <Content Include="JsResourceManager.exe" />
+    <Content Include="JsResourceManager.exe" />
+    <Content Include="Global.asax" />
+    <Content Include="reports\Demo.xml" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\jszip.min.js" />
+    <Content Include="styles\kendo.blackwhite.min.css" />
+    <Content Include="styles\kendo.orange.min.css" />
+    <Content Include="styles\kendo.urban.min.css" />
+    <Content Include="webpack.config.js" />
+    <Content Include="content\fontAwsome\css\all.css" />
+    <Content Include="content\fontAwsome\css\all.min.css" />
+    <Content Include="content\fontAwsome\css\brands.css" />
+    <Content Include="content\fontAwsome\css\brands.min.css" />
+    <Content Include="content\fontAwsome\css\fontawesome.css" />
+    <Content Include="content\fontAwsome\css\fontawesome.min.css" />
+    <Content Include="content\fontAwsome\css\regular.css" />
+    <Content Include="content\fontAwsome\css\regular.min.css" />
+    <Content Include="content\fontAwsome\css\solid.css" />
+    <Content Include="content\fontAwsome\css\solid.min.css" />
+    <Content Include="content\fontAwsome\css\svg-with-js.css" />
+    <Content Include="content\fontAwsome\css\svg-with-js.min.css" />
+    <Content Include="content\fontAwsome\css\v4-shims.css" />
+    <Content Include="content\fontAwsome\css\v4-shims.min.css" />
+    <Content Include="content\fontAwsome\webfonts\fa-brands-400.svg" />
+    <Content Include="content\fontAwsome\webfonts\fa-regular-400.svg" />
+    <Content Include="content\fontAwsome\webfonts\fa-solid-900.svg" />
+    <Content Include="content\icon192x192.png" />
+    <Content Include="content\icon512x512.png" />
+    <Content Include="report.html" />
+    <Content Include="service-worker.js" />
+    <Content Include="styles\Black\editor.png" />
+    <Content Include="styles\Black\imagebrowser.png" />
+    <Content Include="styles\Black\indeterminate.gif" />
+    <Content Include="styles\Black\loading-image.gif" />
+    <Content Include="styles\Black\loading.gif" />
+    <Content Include="styles\Black\loading_2x.gif" />
+    <Content Include="styles\Black\markers.png" />
+    <Content Include="styles\Black\markers_2x.png" />
+    <Content Include="styles\Black\slider-h.gif" />
+    <Content Include="styles\Black\slider-v.gif" />
+    <Content Include="styles\Black\sprite.png" />
+    <Content Include="styles\Black\sprite_2x.png" />
+    <Content Include="styles\Black\sprite_kpi.png" />
+    <Content Include="styles\Black\sprite_kpi_2x.png" />
+    <Content Include="styles\BlueOpal\editor.png" />
+    <Content Include="styles\BlueOpal\imagebrowser.png" />
+    <Content Include="styles\BlueOpal\indeterminate.gif" />
+    <Content Include="styles\BlueOpal\loading-image.gif" />
+    <Content Include="styles\BlueOpal\loading.gif" />
+    <Content Include="styles\BlueOpal\loading_2x.gif" />
+    <Content Include="styles\BlueOpal\markers.png" />
+    <Content Include="styles\BlueOpal\markers_2x.png" />
+    <Content Include="styles\BlueOpal\slider-h.gif" />
+    <Content Include="styles\BlueOpal\slider-v.gif" />
+    <Content Include="styles\BlueOpal\sprite.png" />
+    <Content Include="styles\BlueOpal\sprite_2x.png" />
+    <Content Include="styles\BlueOpal\sprite_kpi.png" />
+    <Content Include="styles\BlueOpal\sprite_kpi_2x.png" />
+    <Content Include="styles\Bootstrap\editor.png" />
+    <Content Include="styles\Bootstrap\imagebrowser.png" />
+    <Content Include="styles\Bootstrap\indeterminate.gif" />
+    <Content Include="styles\Bootstrap\loading-image.gif" />
+    <Content Include="styles\Bootstrap\loading.gif" />
+    <Content Include="styles\Bootstrap\loading_2x.gif" />
+    <Content Include="styles\Bootstrap\markers.png" />
+    <Content Include="styles\Bootstrap\markers_2x.png" />
+    <Content Include="styles\Bootstrap\slider-h.gif" />
+    <Content Include="styles\Bootstrap\slider-v.gif" />
+    <Content Include="styles\Bootstrap\sprite.png" />
+    <Content Include="styles\Bootstrap\sprite_2x.png" />
+    <Content Include="styles\Bootstrap\sprite_kpi.png" />
+    <Content Include="styles\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="styles\Default\editor.png" />
+    <Content Include="styles\Default\imagebrowser.png" />
+    <Content Include="styles\Default\indeterminate.gif" />
+    <Content Include="styles\Default\loading-image.gif" />
+    <Content Include="styles\Default\loading.gif" />
+    <Content Include="styles\Default\loading_2x.gif" />
+    <Content Include="styles\Default\markers.png" />
+    <Content Include="styles\Default\markers_2x.png" />
+    <Content Include="styles\Default\slider-h.gif" />
+    <Content Include="styles\Default\slider-v.gif" />
+    <Content Include="styles\Default\sprite.png" />
+    <Content Include="styles\Default\sprite_2x.png" />
+    <Content Include="styles\Default\sprite_kpi.png" />
+    <Content Include="styles\Default\sprite_kpi_2x.png" />
+    <Content Include="styles\Fiori\editor.png" />
+    <Content Include="styles\Fiori\imagebrowser.png" />
+    <Content Include="styles\Fiori\indeterminate.gif" />
+    <Content Include="styles\Fiori\loading-image.gif" />
+    <Content Include="styles\Fiori\loading.gif" />
+    <Content Include="styles\Fiori\loading_2x.gif" />
+    <Content Include="styles\Fiori\markers.png" />
+    <Content Include="styles\Fiori\markers_2x.png" />
+    <Content Include="styles\Fiori\slider-h.gif" />
+    <Content Include="styles\Fiori\slider-v.gif" />
+    <Content Include="styles\Fiori\sprite.png" />
+    <Content Include="styles\Fiori\sprite_2x.png" />
+    <Content Include="styles\Fiori\sprite_kpi.png" />
+    <Content Include="styles\Fiori\sprite_kpi_2x.png" />
+    <Content Include="styles\Flat\editor.png" />
+    <Content Include="styles\Flat\imagebrowser.png" />
+    <Content Include="styles\Flat\indeterminate.gif" />
+    <Content Include="styles\Flat\loading-image.gif" />
+    <Content Include="styles\Flat\loading.gif" />
+    <Content Include="styles\Flat\loading_2x.gif" />
+    <Content Include="styles\Flat\markers.png" />
+    <Content Include="styles\Flat\markers_2x.png" />
+    <Content Include="styles\Flat\slider-h.gif" />
+    <Content Include="styles\Flat\slider-v.gif" />
+    <Content Include="styles\Flat\sprite.png" />
+    <Content Include="styles\Flat\sprite_2x.png" />
+    <Content Include="styles\Flat\sprite_kpi.png" />
+    <Content Include="styles\Flat\sprite_kpi_2x.png" />
+    <Content Include="styles\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="styles\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="styles\fonts\glyphs\WebComponentsIcons.svg" />
+    <Content Include="styles\HighContrast\editor.png" />
+    <Content Include="styles\HighContrast\imagebrowser.png" />
+    <Content Include="styles\HighContrast\indeterminate.gif" />
+    <Content Include="styles\HighContrast\loading-image.gif" />
+    <Content Include="styles\HighContrast\loading.gif" />
+    <Content Include="styles\HighContrast\loading_2x.gif" />
+    <Content Include="styles\HighContrast\markers.png" />
+    <Content Include="styles\HighContrast\markers_2x.png" />
+    <Content Include="styles\HighContrast\slider-h.gif" />
+    <Content Include="styles\HighContrast\slider-v.gif" />
+    <Content Include="styles\HighContrast\sprite.png" />
+    <Content Include="styles\HighContrast\sprite_2x.png" />
+    <Content Include="styles\HighContrast\sprite_kpi.png" />
+    <Content Include="styles\HighContrast\sprite_kpi_2x.png" />
+    <Content Include="styles\images\back.png" />
+    <Content Include="styles\images\kendoui.svg" />
+    <Content Include="styles\images\wp8_icons.png" />
+    <Content Include="styles\images\wp8_inverseicons.png" />
+    <Content Include="styles\kendo.black.min.css" />
+    <Content Include="styles\kendo.black.mobile.min.css" />
+    <Content Include="styles\kendo.blueopal.min.css" />
+    <Content Include="styles\kendo.blueopal.mobile.min.css" />
+    <Content Include="styles\kendo.bootstrap-v4.min.css" />
+    <Content Include="styles\kendo.bootstrap.min.css" />
+    <Content Include="styles\kendo.bootstrap.mobile.min.css" />
+    <Content Include="styles\kendo.common-bootstrap.min.css" />
+    <Content Include="styles\kendo.common-fiori.min.css" />
+    <Content Include="styles\kendo.common-material.min.css" />
+    <Content Include="styles\kendo.common-nova.min.css" />
+    <Content Include="styles\kendo.common-office365.min.css" />
+    <Content Include="styles\kendo.common.min.css" />
+    <Content Include="styles\kendo.dataviz.black.min.css" />
+    <Content Include="styles\kendo.dataviz.blueopal.min.css" />
+    <Content Include="styles\kendo.dataviz.bootstrap.min.css" />
+    <Content Include="styles\kendo.dataviz.default.min.css" />
+    <Content Include="styles\kendo.dataviz.fiori.min.css" />
+    <Content Include="styles\kendo.dataviz.flat.min.css" />
+    <Content Include="styles\kendo.dataviz.highcontrast.min.css" />
+    <Content Include="styles\kendo.dataviz.material.min.css" />
+    <Content Include="styles\kendo.dataviz.materialblack.min.css" />
+    <Content Include="styles\kendo.dataviz.metro.min.css" />
+    <Content Include="styles\kendo.dataviz.metroblack.min.css" />
+    <Content Include="styles\kendo.dataviz.min.css" />
+    <Content Include="styles\kendo.dataviz.mobile.min.css" />
+    <Content Include="styles\kendo.dataviz.moonlight.min.css" />
+    <Content Include="styles\kendo.dataviz.nova.min.css" />
+    <Content Include="styles\kendo.dataviz.office365.min.css" />
+    <Content Include="styles\kendo.dataviz.silver.min.css" />
+    <Content Include="styles\kendo.dataviz.uniform.min.css" />
+    <Content Include="styles\kendo.default-v2.min.css" />
+    <Content Include="styles\kendo.default.min.css" />
+    <Content Include="styles\kendo.default.mobile.min.css" />
+    <Content Include="styles\kendo.fiori.min.css" />
+    <Content Include="styles\kendo.fiori.mobile.min.css" />
+    <Content Include="styles\kendo.flat.min.css" />
+    <Content Include="styles\kendo.flat.mobile.min.css" />
+    <Content Include="styles\kendo.highcontrast.min.css" />
+    <Content Include="styles\kendo.highcontrast.mobile.min.css" />
+    <Content Include="styles\kendo.material-v2.min.css" />
+    <Content Include="styles\kendo.material.min.css" />
+    <Content Include="styles\kendo.material.mobile.min.css" />
+    <Content Include="styles\kendo.materialblack.min.css" />
+    <Content Include="styles\kendo.materialblack.mobile.min.css" />
+    <Content Include="styles\kendo.metro.min.css" />
+    <Content Include="styles\kendo.metro.mobile.min.css" />
+    <Content Include="styles\kendo.metroblack.min.css" />
+    <Content Include="styles\kendo.metroblack.mobile.min.css" />
+    <Content Include="styles\kendo.mobile.all.min.css" />
+    <Content Include="styles\kendo.mobile.android.dark.min.css" />
+    <Content Include="styles\kendo.mobile.android.light.min.css" />
+    <Content Include="styles\kendo.mobile.blackberry.min.css" />
+    <Content Include="styles\kendo.mobile.common.min.css" />
+    <Content Include="styles\kendo.mobile.fiori.min.css" />
+    <Content Include="styles\kendo.mobile.flat.min.css" />
+    <Content Include="styles\kendo.mobile.ios.min.css" />
+    <Content Include="styles\kendo.mobile.material.min.css" />
+    <Content Include="styles\kendo.mobile.meego.min.css" />
+    <Content Include="styles\kendo.mobile.nova.min.css" />
+    <Content Include="styles\kendo.mobile.office365.min.css" />
+    <Content Include="styles\kendo.mobile.wp8.min.css" />
+    <Content Include="styles\kendo.moonlight.min.css" />
+    <Content Include="styles\kendo.nova.min.css" />
+    <Content Include="styles\kendo.nova.mobile.min.css" />
+    <Content Include="styles\kendo.office365.min.css" />
+    <Content Include="styles\kendo.office365.mobile.min.css" />
+    <Content Include="styles\kendo.rtl.min.css" />
+    <Content Include="styles\kendo.silver.min.css" />
+    <Content Include="styles\kendo.silver.mobile.min.css" />
+    <Content Include="styles\kendo.uniform.min.css" />
+    <Content Include="styles\kendo.uniform.mobile.min.css" />
+    <Content Include="styles\MaterialBlack\editor.png" />
+    <Content Include="styles\MaterialBlack\imagebrowser.png" />
+    <Content Include="styles\MaterialBlack\indeterminate.gif" />
+    <Content Include="styles\MaterialBlack\loading-image.gif" />
+    <Content Include="styles\MaterialBlack\loading.gif" />
+    <Content Include="styles\MaterialBlack\loading_2x.gif" />
+    <Content Include="styles\MaterialBlack\markers.png" />
+    <Content Include="styles\MaterialBlack\markers_2x.png" />
+    <Content Include="styles\MaterialBlack\slider-h.gif" />
+    <Content Include="styles\MaterialBlack\slider-v.gif" />
+    <Content Include="styles\MaterialBlack\sprite.png" />
+    <Content Include="styles\MaterialBlack\sprite_2x.png" />
+    <Content Include="styles\MaterialBlack\sprite_kpi.png" />
+    <Content Include="styles\MaterialBlack\sprite_kpi_2x.png" />
+    <Content Include="styles\Material\editor.png" />
+    <Content Include="styles\Material\imagebrowser.png" />
+    <Content Include="styles\Material\indeterminate.gif" />
+    <Content Include="styles\Material\loading-image.gif" />
+    <Content Include="styles\Material\loading.gif" />
+    <Content Include="styles\Material\loading_2x.gif" />
+    <Content Include="styles\Material\markers.png" />
+    <Content Include="styles\Material\markers_2x.png" />
+    <Content Include="styles\Material\slider-h.gif" />
+    <Content Include="styles\Material\slider-v.gif" />
+    <Content Include="styles\Material\sprite.png" />
+    <Content Include="styles\Material\sprite_2x.png" />
+    <Content Include="styles\Material\sprite_kpi.png" />
+    <Content Include="styles\Material\sprite_kpi_2x.png" />
+    <Content Include="styles\MetroBlack\editor.png" />
+    <Content Include="styles\MetroBlack\imagebrowser.png" />
+    <Content Include="styles\MetroBlack\indeterminate.gif" />
+    <Content Include="styles\MetroBlack\loading-image.gif" />
+    <Content Include="styles\MetroBlack\loading.gif" />
+    <Content Include="styles\MetroBlack\loading_2x.gif" />
+    <Content Include="styles\MetroBlack\markers.png" />
+    <Content Include="styles\MetroBlack\markers_2x.png" />
+    <Content Include="styles\MetroBlack\slider-h.gif" />
+    <Content Include="styles\MetroBlack\slider-v.gif" />
+    <Content Include="styles\MetroBlack\sprite.png" />
+    <Content Include="styles\MetroBlack\sprite_2x.png" />
+    <Content Include="styles\MetroBlack\sprite_kpi.png" />
+    <Content Include="styles\MetroBlack\sprite_kpi_2x.png" />
+    <Content Include="styles\Metro\editor.png" />
+    <Content Include="styles\Metro\imagebrowser.png" />
+    <Content Include="styles\Metro\indeterminate.gif" />
+    <Content Include="styles\Metro\loading-image.gif" />
+    <Content Include="styles\Metro\loading.gif" />
+    <Content Include="styles\Metro\loading_2x.gif" />
+    <Content Include="styles\Metro\markers.png" />
+    <Content Include="styles\Metro\markers_2x.png" />
+    <Content Include="styles\Metro\slider-h.gif" />
+    <Content Include="styles\Metro\slider-v.gif" />
+    <Content Include="styles\Metro\sprite.png" />
+    <Content Include="styles\Metro\sprite_2x.png" />
+    <Content Include="styles\Metro\sprite_kpi.png" />
+    <Content Include="styles\Metro\sprite_kpi_2x.png" />
+    <Content Include="styles\Nova\editor.png" />
+    <Content Include="styles\Nova\imagebrowser.png" />
+    <Content Include="styles\Nova\indeterminate.gif" />
+    <Content Include="styles\Nova\loading-image.gif" />
+    <Content Include="styles\Nova\loading.gif" />
+    <Content Include="styles\Nova\loading_2x.gif" />
+    <Content Include="styles\Nova\markers.png" />
+    <Content Include="styles\Nova\markers_2x.png" />
+    <Content Include="styles\Nova\slider-h.gif" />
+    <Content Include="styles\Nova\slider-v.gif" />
+    <Content Include="styles\Nova\sprite.png" />
+    <Content Include="styles\Nova\sprite_2x.png" />
+    <Content Include="styles\Nova\sprite_kpi.png" />
+    <Content Include="styles\Nova\sprite_kpi_2x.png" />
+    <Content Include="styles\Office365\editor.png" />
+    <Content Include="styles\Office365\imagebrowser.png" />
+    <Content Include="styles\Office365\indeterminate.gif" />
+    <Content Include="styles\Office365\loading-image.gif" />
+    <Content Include="styles\Office365\loading.gif" />
+    <Content Include="styles\Office365\loading_2x.gif" />
+    <Content Include="styles\Office365\markers.png" />
+    <Content Include="styles\Office365\markers_2x.png" />
+    <Content Include="styles\Office365\slider-h.gif" />
+    <Content Include="styles\Office365\slider-v.gif" />
+    <Content Include="styles\Office365\sprite.png" />
+    <Content Include="styles\Office365\sprite_2x.png" />
+    <Content Include="styles\Office365\sprite_kpi.png" />
+    <Content Include="styles\Office365\sprite_kpi_2x.png" />
+    <Content Include="styles\Silver\editor.png" />
+    <Content Include="styles\Silver\imagebrowser.png" />
+    <Content Include="styles\Silver\indeterminate.gif" />
+    <Content Include="styles\Silver\loading-image.gif" />
+    <Content Include="styles\Silver\loading.gif" />
+    <Content Include="styles\Silver\loading_2x.gif" />
+    <Content Include="styles\Silver\markers.png" />
+    <Content Include="styles\Silver\markers_2x.png" />
+    <Content Include="styles\Silver\slider-h.gif" />
+    <Content Include="styles\Silver\slider-v.gif" />
+    <Content Include="styles\Silver\sprite.png" />
+    <Content Include="styles\Silver\sprite_2x.png" />
+    <Content Include="styles\Silver\sprite_kpi.png" />
+    <Content Include="styles\Silver\sprite_kpi_2x.png" />
+    <Content Include="styles\textures\brushed-metal.png" />
+    <Content Include="styles\textures\dots1.png" />
+    <Content Include="styles\textures\dots10.png" />
+    <Content Include="styles\textures\dots11.png" />
+    <Content Include="styles\textures\dots12.png" />
+    <Content Include="styles\textures\dots13.png" />
+    <Content Include="styles\textures\dots2.png" />
+    <Content Include="styles\textures\dots3.png" />
+    <Content Include="styles\textures\dots4.png" />
+    <Content Include="styles\textures\dots5.png" />
+    <Content Include="styles\textures\dots6.png" />
+    <Content Include="styles\textures\dots7.png" />
+    <Content Include="styles\textures\dots8.png" />
+    <Content Include="styles\textures\dots9.png" />
+    <Content Include="styles\textures\glass-lighter.png" />
+    <Content Include="styles\textures\glass.png" />
+    <Content Include="styles\textures\highlight.png" />
+    <Content Include="styles\textures\hsv-gradient.png" />
+    <Content Include="styles\textures\hue.png" />
+    <Content Include="styles\textures\leather1.png" />
+    <Content Include="styles\textures\leather2.png" />
+    <Content Include="styles\textures\noise.png" />
+    <Content Include="styles\textures\stripe1.png" />
+    <Content Include="styles\textures\stripe2.png" />
+    <Content Include="styles\textures\stripe3.png" />
+    <Content Include="styles\textures\stripe4.png" />
+    <Content Include="styles\textures\stripe5.png" />
+    <Content Include="styles\textures\stripe6.png" />
+    <Content Include="styles\textures\transparency.png" />
+    <Content Include="styles\textures\transtexture.png" />
+    <Content Include="styles\Uniform\editor.png" />
+    <Content Include="styles\Uniform\imagebrowser.png" />
+    <Content Include="styles\Uniform\indeterminate.gif" />
+    <Content Include="styles\Uniform\loading-image.gif" />
+    <Content Include="styles\Uniform\loading.gif" />
+    <Content Include="styles\Uniform\loading_2x.gif" />
+    <Content Include="styles\Uniform\markers.png" />
+    <Content Include="styles\Uniform\markers_2x.png" />
+    <Content Include="styles\Uniform\slider-h.gif" />
+    <Content Include="styles\Uniform\slider-v.gif" />
+    <Content Include="styles\Uniform\sprite.png" />
+    <Content Include="styles\Uniform\sprite_2x.png" />
+    <Content Include="styles\Uniform\sprite_kpi.png" />
+    <Content Include="styles\Uniform\sprite_kpi_2x.png" />
+    <Content Include="sw.js" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="ClientApp\components\imagepicker\imagepicker.vue" />
+    <Content Include="ClientApp\pages\account\login.vue" />
+    <Content Include="ClientApp\pages\main.vue" />
+    <Content Include="ClientApp\pages\home\index.vue" />
+    <Content Include="content\BYekan.woff" />
+    <Content Include="content\BYekan.eot" />
+    <Content Include="content\BYekan.ttf" />
+    <Content Include="content\Irancell 03 Regular.ttf" />
+    <Content Include="content\Irancell 05 Bold.ttf" />
+    <Content Include="content\Vazir-FD-WOL.woff" />
+    <Content Include="ClientApp\components\datepicker\datepicker.vue" />
+    <Content Include="ClientApp\components\select\select.vue" />
+    <Content Include="ClientApp\components\timepicker\timepicker.vue" />
+    <Content Include="ClientApp\components\contextmenu\contextmenu.vue" />
+    <Content Include="ClientApp\components\timeinput\timeinput.vue" />
+    <Content Include="ClientApp\pages\home\about.vue" />
+    <Content Include="appSettings.config" />
+    <Content Include="ClientApp\pages\shared\report.vue" />
+    <EntityDeploy Include="Capital.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Capital.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Capital.edmx.diagram">
+      <DependentUpon>Capital.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\HosseinPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\EtsWebApplication_Published.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="content\fontAwsome\webfonts\fa-brands-400.eot" />
+    <Content Include="content\fontAwsome\webfonts\fa-brands-400.ttf" />
+    <Content Include="content\fontAwsome\webfonts\fa-brands-400.woff" />
+    <Content Include="content\fontAwsome\webfonts\fa-brands-400.woff2" />
+    <Content Include="content\fontAwsome\webfonts\fa-regular-400.eot" />
+    <Content Include="content\fontAwsome\webfonts\fa-regular-400.ttf" />
+    <Content Include="content\fontAwsome\webfonts\fa-regular-400.woff" />
+    <Content Include="content\fontAwsome\webfonts\fa-regular-400.woff2" />
+    <Content Include="content\fontAwsome\webfonts\fa-solid-900.eot" />
+    <Content Include="content\fontAwsome\webfonts\fa-solid-900.ttf" />
+    <Content Include="content\fontAwsome\webfonts\fa-solid-900.woff" />
+    <Content Include="content\fontAwsome\webfonts\fa-solid-900.woff2" />
+    <Content Include="content\web_Yekan.woff" />
+    <Content Include="manifest.json" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="styles\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="styles\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="styles\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="styles\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="styles\fonts\glyphs\WebComponentsIcons.eot" />
+    <Content Include="styles\fonts\glyphs\WebComponentsIcons.ttf" />
+    <Content Include="styles\fonts\glyphs\WebComponentsIcons.woff" />
+    <Content Include="styles\images\kendoui.ttf" />
+    <Content Include="styles\images\kendoui.woff" />
+    <Content Include="styles\kendo.black.min.css.map" />
+    <Content Include="styles\kendo.black.mobile.min.css.map" />
+    <Content Include="styles\kendo.blueopal.min.css.map" />
+    <Content Include="styles\kendo.blueopal.mobile.min.css.map" />
+    <Content Include="styles\kendo.bootstrap-v4.min.css.map" />
+    <Content Include="styles\kendo.bootstrap.min.css.map" />
+    <Content Include="styles\kendo.bootstrap.mobile.min.css.map" />
+    <Content Include="styles\kendo.common-bootstrap.min.css.map" />
+    <Content Include="styles\kendo.common-fiori.min.css.map" />
+    <Content Include="styles\kendo.common-material.min.css.map" />
+    <Content Include="styles\kendo.common-nova.min.css.map" />
+    <Content Include="styles\kendo.common-office365.min.css.map" />
+    <Content Include="styles\kendo.common.min.css.map" />
+    <Content Include="styles\kendo.dataviz.black.min.css.map" />
+    <Content Include="styles\kendo.dataviz.blueopal.min.css.map" />
+    <Content Include="styles\kendo.dataviz.bootstrap.min.css.map" />
+    <Content Include="styles\kendo.dataviz.default.min.css.map" />
+    <Content Include="styles\kendo.dataviz.fiori.min.css.map" />
+    <Content Include="styles\kendo.dataviz.flat.min.css.map" />
+    <Content Include="styles\kendo.dataviz.highcontrast.min.css.map" />
+    <Content Include="styles\kendo.dataviz.material.min.css.map" />
+    <Content Include="styles\kendo.dataviz.materialblack.min.css.map" />
+    <Content Include="styles\kendo.dataviz.metro.min.css.map" />
+    <Content Include="styles\kendo.dataviz.metroblack.min.css.map" />
+    <Content Include="styles\kendo.dataviz.min.css.map" />
+    <Content Include="styles\kendo.dataviz.mobile.min.css.map" />
+    <Content Include="styles\kendo.dataviz.moonlight.min.css.map" />
+    <Content Include="styles\kendo.dataviz.nova.min.css.map" />
+    <Content Include="styles\kendo.dataviz.office365.min.css.map" />
+    <Content Include="styles\kendo.dataviz.silver.min.css.map" />
+    <Content Include="styles\kendo.dataviz.uniform.min.css.map" />
+    <Content Include="styles\kendo.default-v2.min.css.map" />
+    <Content Include="styles\kendo.default.min.css.map" />
+    <Content Include="styles\kendo.default.mobile.min.css.map" />
+    <Content Include="styles\kendo.fiori.min.css.map" />
+    <Content Include="styles\kendo.fiori.mobile.min.css.map" />
+    <Content Include="styles\kendo.flat.min.css.map" />
+    <Content Include="styles\kendo.flat.mobile.min.css.map" />
+    <Content Include="styles\kendo.highcontrast.min.css.map" />
+    <Content Include="styles\kendo.highcontrast.mobile.min.css.map" />
+    <Content Include="styles\kendo.material-v2.min.css.map" />
+    <Content Include="styles\kendo.material.min.css.map" />
+    <Content Include="styles\kendo.material.mobile.min.css.map" />
+    <Content Include="styles\kendo.materialblack.min.css.map" />
+    <Content Include="styles\kendo.materialblack.mobile.min.css.map" />
+    <Content Include="styles\kendo.metro.min.css.map" />
+    <Content Include="styles\kendo.metro.mobile.min.css.map" />
+    <Content Include="styles\kendo.metroblack.min.css.map" />
+    <Content Include="styles\kendo.metroblack.mobile.min.css.map" />
+    <Content Include="styles\kendo.mobile.all.min.css.map" />
+    <Content Include="styles\kendo.mobile.android.dark.min.css.map" />
+    <Content Include="styles\kendo.mobile.android.light.min.css.map" />
+    <Content Include="styles\kendo.mobile.blackberry.min.css.map" />
+    <Content Include="styles\kendo.mobile.common.min.css.map" />
+    <Content Include="styles\kendo.mobile.fiori.min.css.map" />
+    <Content Include="styles\kendo.mobile.flat.min.css.map" />
+    <Content Include="styles\kendo.mobile.ios.min.css.map" />
+    <Content Include="styles\kendo.mobile.material.min.css.map" />
+    <Content Include="styles\kendo.mobile.meego.min.css.map" />
+    <Content Include="styles\kendo.mobile.nova.min.css.map" />
+    <Content Include="styles\kendo.mobile.office365.min.css.map" />
+    <Content Include="styles\kendo.mobile.wp8.min.css.map" />
+    <Content Include="styles\kendo.nova.min.css.map" />
+    <Content Include="styles\kendo.nova.mobile.min.css.map" />
+    <Content Include="styles\kendo.office365.min.css.map" />
+    <Content Include="styles\kendo.office365.mobile.min.css.map" />
+    <Content Include="styles\kendo.rtl.min.css.map" />
+    <Content Include="styles\kendo.silver.min.css.map" />
+    <Content Include="styles\kendo.silver.mobile.min.css.map" />
+    <Content Include="styles\kendo.uniform.min.css.map" />
+    <Content Include="styles\kendo.uniform.mobile.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Resources\CaptionsLibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaptionsLibrary.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Resources\CaptionsLibrary.fa-IR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaptionsLibrary.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Resources\MessagesLibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessagesLibrary.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Resources\MessagesLibrary.fa-IR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessagesLibrary.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Areas\RM\Controllers\Shared\SharedController.cs" />
+    <Compile Include="Areas\RM\RequestManagementAreaRegistration.cs" />
+    <Compile Include="BaseClasses\AesEncryptDecryptor.cs" />
+    <Compile Include="Capital.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Capital.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Capital.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Capital.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Capital.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Capital.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="company.cs">
+      <DependentUpon>Capital.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastracture\ActionFilters\AccessAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\AjaxMethodAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\CrudAccessAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\DeleteFileAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\LoginFilterAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\PageLoadFilterAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\PageScriptInitiatorFilter.cs" />
+    <Compile Include="Infrastracture\ActionFilters\SessionExpiredFilterAttribute.cs" />
+    <Compile Include="Infrastracture\ActionFilters\ValidateModelFilterAttribute.cs" />
+    <Compile Include="Infrastracture\ActionResults\CaptchaImageResult.cs" />
+    <Compile Include="Infrastracture\ActionResults\CustomActionResult.cs" />
+    <Compile Include="Infrastracture\ActionResults\DeleteFileAttribute.cs" />
+    <Compile Include="Infrastracture\ActionResults\PermanentRedirectResult.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\AllowCrossSiteJsonAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\ApplicationLockCheckerAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\CartableAuthorizeAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\ModulesLockCheckerAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\OperatorAuthorizeAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\OwnedEmployeeAuthorizeAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\PermissionAuthorizeAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\ServiceVersionValidationFIlter.cs" />
+    <Compile Include="Infrastracture\Attributes\ActionFilters\SessionExpireAttribute.cs" />
+    <Compile Include="Infrastracture\Attributes\Shared\ElmahMvcErrorLoggerFilter.cs" />
+    <Compile Include="Infrastracture\BaseClasses\BaseController.cs" />
+    <Compile Include="Infrastracture\BaseClasses\BasePageController.cs" />
+    <Compile Include="Infrastracture\BaseClasses\BaseViewPage.cs" />
+    <Compile Include="Infrastracture\BaseClasses\ResponceResult.cs" />
+    <Compile Include="Infrastracture\Bootstrapper\WebApplicationBootstrapper.cs" />
+    <Compile Include="Infrastracture\Config\AppSetting.cs" />
+    <Compile Include="Infrastracture\Controllers\AppBootstrapperController.cs" />
+    <Compile Include="Infrastracture\Controllers\BaseController.cs" />
+    <Compile Include="Infrastracture\Enums\Month.cs" />
+    <Compile Include="Infrastracture\Enums\AccessLevelDetails.cs" />
+    <Compile Include="Infrastracture\Enums\EnumHelper.cs" />
+    <Compile Include="Infrastracture\Enums\ResponseType.cs" />
+    <Compile Include="Infrastracture\Enums\ShareholderKind.cs" />
+    <Compile Include="Infrastracture\Enums\TransactionType.cs" />
+    <Compile Include="Infrastracture\Exceptions\ServiceMessageExpeption.cs" />
+    <Compile Include="Infrastracture\Helpers\CaptchaImage.cs" />
+    <Compile Include="Infrastracture\Helpers\DateTimeHelper.cs" />
+    <Compile Include="Infrastracture\Helpers\EnumToJsonHelper.cs" />
+    <Compile Include="Infrastracture\ViewEngines\CustomViewEngine.cs" />
+    <Compile Include="Infrastracture\ViewEngins\CustomViewEngine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CompanyRepository.cs" />
+    <Compile Include="Repository\ShareholerRepository.cs" />
+    <Compile Include="shareholder.cs">
+      <DependentUpon>Capital.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpClasses\FilterHelper.cs" />
+    <Compile Include="ViewModel\LockModel.cs" />
+    <Compile Include="ViewModel\LoginModel.cs" />
+    <Compile Include="ViewModel\LoginResultModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="tsconfig.json" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewImports.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="scripts\jquery.min.map" />
+    <Content Include="Views\Home\Template.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\ErrorPages\NotFoundService.cshtml" />
+    <Content Include="Views\Shared\ErrorPages\NotFound.cshtml" />
+    <Content Include="reports\ChartStyles.mrt" />
+    <Content Include="reports\CustomAdapter.mrt" />
+    <Content Include="reports\Demo.json" />
+    <None Include="reports\Demo.xsd" />
+    <Content Include="reports\HighlightCondition.mrt" />
+    <Content Include="reports\Images.mrt" />
+    <Content Include="reports\MasterDetail.mrt" />
+    <Content Include="reports\MultiColumnList.mrt" />
+    <Content Include="reports\ReportWithVariable.mrt" />
+    <Content Include="reports\Roboto-Black.ttf" />
+    <Content Include="reports\SideBySideListWithContainers.mrt" />
+    <Content Include="reports\SimpleGroup.mrt" />
+    <Content Include="reports\Golgohar.mrt" />
+    <Content Include="reports\test.mrt" />
+    <Content Include="reports\Sample.json" />
+    <Content Include="reports\GolgoharMob.mrt" />
+    <Content Include="reports\Tukafoolad.mrt" />
+    <Content Include="reports\TukafooladMob.mrt" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\RM\Views\Rpt0702Assign\" />
+    <Folder Include="Areas\RM\Views\Rpt0702\" />
+    <Folder Include="Areas\RM\Views\Rpt14\" />
+    <Folder Include="Areas\RM\Views\Rpt44\" />
+    <Folder Include="Areas\RM\Views\RptAmntCap\" />
+    <Folder Include="Areas\RM\Views\RptMaxBuyer\" />
+    <Folder Include="Areas\RM\Views\RptMaxSeller\" />
+    <Folder Include="Areas\RM\Views\RptSeason\" />
+    <Folder Include="Areas\RM\Views\RptSellerBuyer\" />
+    <Folder Include="Areas\RM\Views\RptUserTask\" />
+    <Folder Include="Areas\RM\Views\Shared\" />
+    <Folder Include="Controllers\Shared\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Resources\CaptionsLibrary.fa-IR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CaptionsLibrary.fa-IR.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>App_Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Resources\CaptionsLibrary.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CaptionsLibrary.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>App_Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Resources\MessagesLibrary.fa-IR.resx">
+      <CustomToolNamespace>App_Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesLibrary.fa-IR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Resources\MessagesLibrary.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesLibrary.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>App_Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\contextmenu\contextmenu.ts" />
+    <TypeScriptCompile Include="ClientApp\components\timeinput\timeinput.ts" />
+    <TypeScriptCompile Include="ClientApp\pages\home\about.ts" />
+    <TypeScriptCompile Include="ClientApp\pages\shared\report.ts" />
+    <TypeScriptCompile Include="ClientApp\stimulsoft.reports.d.ts" />
+    <TypeScriptCompile Include="ClientApp\assets\utilities.ts" />
+    <TypeScriptCompile Include="ClientApp\boot.ts" />
+    <TypeScriptCompile Include="ClientApp\components\datepicker\datepicker.ts" />
+    <TypeScriptCompile Include="ClientApp\components\imagepicker\imagepicker.ts" />
+    <TypeScriptCompile Include="ClientApp\components\select\select.ts" />
+    <TypeScriptCompile Include="ClientApp\components\timepicker\timepicker.ts" />
+    <TypeScriptCompile Include="ClientApp\pages\account\login.ts" />
+    <TypeScriptCompile Include="ClientApp\pages\home\index.ts" />
+    <TypeScriptCompile Include="ClientApp\pages\main.ts" />
+    <TypeScriptCompile Include="ClientApp\stimulsoft.reports.d.ts" />
+    <TypeScriptCompile Include="ClientApp\vue-shim.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32089</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1401/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>call $(ProjectDir)JsResourceManager.exe
+TIME /T</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+    <Exec Condition="$(Configuration) == 'Release'" Command="npm run prod" />
+  </Target>-->
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets')" />
+</Project>

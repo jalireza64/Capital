@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9NRlC08OMQVgW6Wc6QCxEtFU2WnGS0vZckkl9ODEJV6CEtECRlHThWhB1VhiHSV75HDPoU1M091FGZzsalxgj41UZQvvA5Lda0GE7OQYJXve3GWiVRh7+ctbuNxpGOAn0mzPCcVno+niRKXJ5Uwo18l6ga9bXdOB4lH9xGQ=</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <SHAREHOLDER Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>SHAREHOLDER</Alias>
+        <Columns isList="true" count="61">
+          <value>SHRH_CODE,System.String</value>
+          <value>SHRH_ACTIVITY,System.String</value>
+          <value>SHRH_EXCH_CODE,System.String</value>
+          <value>SHRH_FIRST_SERIAL,System.String</value>
+          <value>NOTE,System.String</value>
+          <value>SHRH_ACC,System.String</value>
+          <value>UPDATE_DATE,System.DateTime</value>
+          <value>SHRH_BBS_CODE,System.String</value>
+          <value>SHRH_SIGN,System.Byte[]</value>
+          <value>SHRH_PWD,System.String</value>
+          <value>acc_kind_code,System.String</value>
+          <value>sp_class_code,System.String</value>
+          <value>sp_class_item_code,System.String</value>
+          <value>SEX,System.String</value>
+          <value>SP_BANK_CODE,System.String</value>
+          <value>BANK_ACC_NAME,System.String</value>
+          <value>D1_BANK,System.String</value>
+          <value>DOC_PIC,System.Byte[]</value>
+          <value>PIC_SIGN,System.Byte[]</value>
+          <value>NAT_ID,System.String</value>
+          <value>SURNAME_ID,System.String</value>
+          <value>NAME_ID,System.String</value>
+          <value>FATHER_ID,System.String</value>
+          <value>INSTITUTE_ID,System.String</value>
+          <value>SHRH_DET,System.String</value>
+          <value>SEPLC_CODE,System.String</value>
+          <value>NATID,System.String</value>
+          <value>TAX_LEVEL,System.String</value>
+          <value>BANK_CODE,System.String</value>
+          <value>BANK_BRANCH_CODE,System.String</value>
+          <value>USER_ID,System.String</value>
+          <value>SP_SHRH_CODE,System.String</value>
+          <value>CITYID,System.String</value>
+          <value>ADDRESS,System.String</value>
+          <value>TEL_NO_1,System.String</value>
+          <value>CELL_PHONE,System.String</value>
+          <value>FAX_NO,System.String</value>
+          <value>ZIP_CODE,System.String</value>
+          <value>TEL_NO_2,System.String</value>
+          <value>E_MAIL,System.String</value>
+          <value>POST_BOX,System.String</value>
+          <value>CERT_NO,System.String</value>
+          <value>SURNAME1,System.String</value>
+          <value>NAME1,System.String</value>
+          <value>FATHER1,System.String</value>
+          <value>D1_BIRTH,System.String</value>
+          <value>BIRTH_CITY,System.String</value>
+          <value>CERT_CITY,System.String</value>
+          <value>D1_ISSU_CERT,System.String</value>
+          <value>SERIAL_CERT_NO,System.String</value>
+          <value>NAT_CODE,System.String</value>
+          <value>INSTITUTE,System.String</value>
+          <value>REG_PLACE,System.String</value>
+          <value>REG_DATE,System.String</value>
+          <value>AGENT,System.String</value>
+          <value>BUSS_KIND,System.String</value>
+          <value>REG_NO,System.String</value>
+          <value>INST_KIND,System.String</value>
+          <value>ECO_CODE,System.String</value>
+          <value>TBL_DATE,System.String</value>
+          <value>SHRH_KIND,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>SHAREHOLDER</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from SHAREHOLDER</SqlCommand>
+      </SHAREHOLDER>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <Text1 Ref="5" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>2.1,0.6,2,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Yekan,8</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>{SHAREHOLDER.SHRH_CODE}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>DataColumn</Type>
+        </Text1>
+        <Text2 Ref="6" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>4.6,0.6,1.4,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Yekan,8</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>شماره شناسایی</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text2>
+        <Text3 Ref="7" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>2.1,1.1,2,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Yekan,8</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>{SHAREHOLDER.NAME_ID}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text3>
+        <Image1 Ref="8" type="Image" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3,1.3,2,2.9</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <ImageBytes>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
+VrKwQYb9Y20AAAAASUVORK5CYII=</ImageBytes>
+          <Margins>0,0,0,0</Margins>
+          <Name>Image1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Image1>
+        <Text4 Ref="9" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>4.6,1.1,1.4,0.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Yekan,8</Font>
+          <Guid>fefb56ba9e9f48d287218499eff62011</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>نام</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>5575f746d09d45c5b5641680085b4512</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="10" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="11" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/1/2020 6:51:40 PM</ReportChanged>
+  <ReportCreated>5/1/2020 5:09:03 PM</ReportCreated>
+  <ReportFile>C:\WorkSpaces\EtsProject\Source\Ets\EmployeeRequest\EmployeeRequest\reports\test2.mrt</ReportFile>
+  <ReportGuid>c73671e3df634fc083e160177e8dc96b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2018.1.6.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

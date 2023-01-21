@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="capitalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="comp_id" />
+          </Key>
+          <Property Name="comp_id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company_name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="reg_no" Type="nchar" MaxLength="20" />
+          <Property Name="national_code" Type="nchar" MaxLength="20" />
+          <Property Name="address" Type="nvarchar" MaxLength="300" />
+          <Property Name="postal_code" Type="nchar" MaxLength="10" />
+          <Property Name="tel" Type="nvarchar" MaxLength="300" />
+          <Property Name="bank_acc_desc" Type="nvarchar" MaxLength="1000" />
+          <Property Name="end_date_s" Type="nchar" MaxLength="8" />
+          <Property Name="end_date_e" Type="nchar" MaxLength="8" />
+          <Property Name="share_amnt" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="cap_percent" Type="nvarchar" MaxLength="100" />
+          <Property Name="pre_cap_amnt" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="cap_amnt" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="share_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="update_date" Type="datetime" />
+          <Property Name="form_type" Type="nchar" MaxLength="1" />
+          <Property Name="form_path" Type="nvarchar" MaxLength="100" />
+          <Property Name="login_message" Type="nvarchar" MaxLength="300" />
+          <Property Name="link_add_1" Type="nvarchar" MaxLength="300" />
+          <Property Name="link_add_2" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="shareholder">
+          <Key>
+            <PropertyRef Name="shrh_code" />
+            <PropertyRef Name="comp_id" />
+          </Key>
+          <Property Name="shrh_code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="comp_id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="300" />
+          <Property Name="surname" Type="nvarchar" MaxLength="300" />
+          <Property Name="father" Type="nvarchar" MaxLength="300" />
+          <Property Name="cert_no" Type="nchar" MaxLength="20" />
+          <Property Name="nat_code" Type="nvarchar" MaxLength="20" />
+          <Property Name="bbs_code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="mobile" Type="nchar" MaxLength="10" />
+          <Property Name="s_address" Type="nvarchar" MaxLength="300" />
+          <Property Name="s_postal_code" Type="nchar" MaxLength="10" />
+          <Property Name="share" Type="bigint" />
+          <Property Name="spri_qunt" Type="bigint" />
+          <Property Name="spri_amnt" Type="money" />
+          <Property Name="credit_amnt" Type="money" />
+          <Property Name="pay_amnt" Type="money" />
+          <Property Name="password" Type="nvarchar" MaxLength="100" />
+          <Property Name="print_flag" Type="nchar" MaxLength="1" />
+          <Property Name="update_date" Type="datetime" />
+          <Property Name="pay_id" Type="nvarchar" MaxLength="255" />
+          <Property Name="kind" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_shareholder_company">
+          <End Role="company" Type="Self.company" Multiplicity="1" />
+          <End Role="shareholder" Type="Self.shareholder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company">
+              <PropertyRef Name="comp_id" />
+            </Principal>
+            <Dependent Role="shareholder">
+              <PropertyRef Name="comp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="capitalModelStoreContainer">
+          <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="shareholder" EntityType="Self.shareholder" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_shareholder_company" Association="Self.FK_shareholder_company">
+            <End Role="company" EntitySet="company" />
+            <End Role="shareholder" EntitySet="shareholder" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="capitalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="comp_id" />
+          </Key>
+          <Property Name="comp_id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company_name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="reg_no" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="national_code" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="postal_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="bank_acc_desc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="end_date_s" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+          <Property Name="end_date_e" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+          <Property Name="share_amnt" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cap_percent" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pre_cap_amnt" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cap_amnt" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="share_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="update_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="shareholders" Relationship="Self.FK_shareholder_company" FromRole="company" ToRole="shareholder" />
+          <Property Name="form_type" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="form_path" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="login_message" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="link_add_1" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="link_add_2" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="shareholder">
+          <Key>
+            <PropertyRef Name="shrh_code" />
+            <PropertyRef Name="comp_id" />
+          </Key>
+          <Property Name="shrh_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="comp_id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="surname" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="father" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="cert_no" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="nat_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="bbs_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="s_address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="s_postal_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="share" Type="Int64" />
+          <Property Name="spri_qunt" Type="Int64" />
+          <Property Name="spri_amnt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="credit_amnt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="pay_amnt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="print_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="update_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="company" Relationship="Self.FK_shareholder_company" FromRole="shareholder" ToRole="company" />
+          <Property Name="pay_id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="kind" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_shareholder_company">
+          <End Role="company" Type="Self.company" Multiplicity="1" />
+          <End Role="shareholder" Type="Self.shareholder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company">
+              <PropertyRef Name="comp_id" />
+            </Principal>
+            <Dependent Role="shareholder">
+              <PropertyRef Name="comp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="capitalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="companies" EntityType="Self.company" />
+          <EntitySet Name="shareholders" EntityType="Self.shareholder" />
+          <AssociationSet Name="FK_shareholder_company" Association="Self.FK_shareholder_company">
+            <End Role="company" EntitySet="companies" />
+            <End Role="shareholder" EntitySet="shareholders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="capitalModelStoreContainer" CdmEntityContainer="capitalEntities">
+          <EntitySetMapping Name="companies">
+            <EntityTypeMapping TypeName="capitalModel.company">
+              <MappingFragment StoreEntitySet="company">
+                <ScalarProperty Name="link_add_2" ColumnName="link_add_2" />
+                <ScalarProperty Name="link_add_1" ColumnName="link_add_1" />
+                <ScalarProperty Name="login_message" ColumnName="login_message" />
+                <ScalarProperty Name="form_path" ColumnName="form_path" />
+                <ScalarProperty Name="form_type" ColumnName="form_type" />
+                <ScalarProperty Name="comp_id" ColumnName="comp_id" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="reg_no" ColumnName="reg_no" />
+                <ScalarProperty Name="national_code" ColumnName="national_code" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="bank_acc_desc" ColumnName="bank_acc_desc" />
+                <ScalarProperty Name="end_date_s" ColumnName="end_date_s" />
+                <ScalarProperty Name="end_date_e" ColumnName="end_date_e" />
+                <ScalarProperty Name="share_amnt" ColumnName="share_amnt" />
+                <ScalarProperty Name="cap_percent" ColumnName="cap_percent" />
+                <ScalarProperty Name="pre_cap_amnt" ColumnName="pre_cap_amnt" />
+                <ScalarProperty Name="cap_amnt" ColumnName="cap_amnt" />
+                <ScalarProperty Name="share_type" ColumnName="share_type" />
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shareholders">
+            <EntityTypeMapping TypeName="capitalModel.shareholder">
+              <MappingFragment StoreEntitySet="shareholder">
+                <ScalarProperty Name="kind" ColumnName="kind" />
+                <ScalarProperty Name="pay_id" ColumnName="pay_id" />
+                <ScalarProperty Name="shrh_code" ColumnName="shrh_code" />
+                <ScalarProperty Name="comp_id" ColumnName="comp_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="father" ColumnName="father" />
+                <ScalarProperty Name="cert_no" ColumnName="cert_no" />
+                <ScalarProperty Name="nat_code" ColumnName="nat_code" />
+                <ScalarProperty Name="bbs_code" ColumnName="bbs_code" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="s_address" ColumnName="s_address" />
+                <ScalarProperty Name="s_postal_code" ColumnName="s_postal_code" />
+                <ScalarProperty Name="share" ColumnName="share" />
+                <ScalarProperty Name="spri_qunt" ColumnName="spri_qunt" />
+                <ScalarProperty Name="spri_amnt" ColumnName="spri_amnt" />
+                <ScalarProperty Name="credit_amnt" ColumnName="credit_amnt" />
+                <ScalarProperty Name="pay_amnt" ColumnName="pay_amnt" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="print_flag" ColumnName="print_flag" />
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,12 @@
+var serviceWorkerOption = {
+  "assets": []
+};
+        
+        !function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/dist/",n(n.s=0)}([
+/*!***************!*\
+  !*** ./sw.js ***!
+  \***************/
+/*! no static exports found */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t,n){var r="cache-and-update";function o(e){return caches.open(r).then((function(t){return fetch(e).then((function(n){return t.put(e,n),n}))}))}self.addEventListener("install",(function(){return self.skipWaiting()})),self.addEventListener("activate",(function(){return self.clients.claim()})),self.addEventListener("fetch",e=>{if("GET"!==e.request.method)return;const t=e.request.url.includes("---")&&(e.request.url.includes("dist/main")||e.request.url.includes("dist/chunk")||e.request.url.includes("dist/resourcemanager"));e.waitUntil(()=>{var n;(n=e.request,caches.open(r).then((function(e){return e.match(n).then((function(e){if(e)return e;Promise.reject("no-match")}))}))).then(n=>{e.respondWith(n),t||e.waitUntil(o(e.request))}).catch(()=>{e.respondWith(o(e.request))})})}),self.addEventListener("push",(function(e){e.waitUntil((async()=>{const t=e.data.json();console.log(t);let n={};if(t.RequesterId){const e=await fetch(`/api/Employee/GetEmployee?EmployeeId=${t.RequesterId}`,{credentials:"same-origin",headers:{"Content-Type":"application/json"},method:"Get"});n=await e.json()}console.log(n);let r={body:t.Body,icon:"data:image/png;base64,"+n.Photo||!1,vibrate:[50,30,50]};console.log("before notification"),await self.registration.showNotification(`${t.Title} • ${n.FullName}`,r),console.log("after notification")})())}))}]);
+//# sourceMappingURL=service-worker.js.map

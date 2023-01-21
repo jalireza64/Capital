@@ -1,0 +1,988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnotherUserLoggedWithYourData" xml:space="preserve">
+    <value>کاربر دیگری با اطلاعات شما وارد سامانه شده است</value>
+  </data>
+  <data name="CatchError" xml:space="preserve">
+    <value>متاسفانه خطایی رخ داده است &lt;br /&gt;</value>
+  </data>
+  <data name="DatetimeNotValid" xml:space="preserve">
+    <value>تاریخ وارده نامعتبر می باشد</value>
+  </data>
+  <data name="EmailNotValid" xml:space="preserve">
+    <value>پست الکترونیکی وارده نامعتبر می باشد</value>
+  </data>
+  <data name="EnteredDataHasConflict" xml:space="preserve">
+    <value>تداخل در داده های وارد شده، لطفا مقادیر را تصحیح نمایید</value>
+  </data>
+  <data name="ErrorInFetchWindowIdentity" xml:space="preserve">
+    <value>خطا در دریافت اطلاعات اکتیو دایرکتوری</value>
+  </data>
+  <data name="ErrorInSetActiveDirectoryConfigs" xml:space="preserve">
+    <value>خطا در ثبت تنظیمات اکتیو دایرکتوری</value>
+  </data>
+  <data name="ForUseThisOptionShouldHaveActiveDirecory" xml:space="preserve">
+    <value> جهت استفاده از این ویژگی سیستم باید روی یک دامین اکتیو دایرکتوری تنطیم شود</value>
+  </data>
+  <data name="InpusError" xml:space="preserve">
+    <value>مقادیر را بدرستی وارد نمایید</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>کلمه عبور وارد شده صحیح نمی باشد</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>نام کاربری وارده شده صحیح نمی باشد</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>نام کاربری یا کلمه عبور وارد شده صحیح نمی باشد</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>ورود با شکست مواجه شد</value>
+  </data>
+  <data name="LoginIsOk" xml:space="preserve">
+    <value>ورود با موفقیت انجام شد</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>هیچ اطلاعاتی یافت نشد</value>
+  </data>
+  <data name="NoLicenseFoundForthisRequest" xml:space="preserve">
+    <value>مجوز رسیدگی به این درخواست یافت نشد</value>
+  </data>
+  <data name="NumericInputError" xml:space="preserve">
+    <value>مقدار فیلد {0} باید عددی باشد</value>
+  </data>
+  <data name="OldPasswordIsIncorrect" xml:space="preserve">
+    <value>کلمه عبور وارد شده  صحیح نمی باشد</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>متاسفانه در انجام عملیات مشکلی پیش آمده است</value>
+  </data>
+  <data name="OperationSuccessed" xml:space="preserve">
+    <value>عملیات مورد نظر با موفقیت انجام شد</value>
+  </data>
+  <data name="PeriodCalculationResultInSelectedPeriosIsNull" xml:space="preserve">
+    <value> محاسبه ای برای دوره انتخابی صورت نگرفته است</value>
+  </data>
+  <data name="PleaseCheckIISConfiguration" xml:space="preserve">
+    <value>جهت استفاده از این گزینه از صحت تنظیمات iis مطمئن شوید</value>
+  </data>
+  <data name="RangeError" xml:space="preserve">
+    <value>محدوده وارد شده نامعتبر می باشد، محدوده مجاز بین ({1}) تا ({2}) می باشد</value>
+  </data>
+  <data name="ReadDataError" xml:space="preserve">
+    <value>متاسفانه در دریافت اطلاعات خطایی رخ داده است</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>وارد کردن این فیلد الزامی می باشد</value>
+  </data>
+  <data name="RequiredEntity" xml:space="preserve">
+    <value>وارد کردن فیلد {0} الزامی می باشد</value>
+  </data>
+  <data name="ResultIsEmpty" xml:space="preserve">
+    <value>نتیجه ای یافت نشد، هیچ داده ای برای این درخواست یافت نشد</value>
+  </data>
+  <data name="SendingDataFailed" xml:space="preserve">
+    <value>متاسفانه در ارسال اطلاعات خطایی رخ داده است</value>
+  </data>
+  <data name="SendMessageSuccessed" xml:space="preserve">
+    <value>پیام شما با موفقیت ارسال شد</value>
+  </data>
+  <data name="ServiceConnectError" xml:space="preserve">
+    <value>خطا در ارتباط با سرویس</value>
+  </data>
+  <data name="SignoutError" xml:space="preserve">
+    <value>در فرآیند خروج از سامانه خطایی رخ داده است</value>
+  </data>
+  <data name="StringLengthError" xml:space="preserve">
+    <value>محدوده مجاز طول کلمات وارده بین حداقل {2} و  حداکثر {1} کاراکتر می باشد</value>
+  </data>
+  <data name="TellInputError" xml:space="preserve">
+    <value> &lt;b&gt;###-#######&lt;b /&gt;: فرمت فیلد {0} وارده بصحیح نمی باشد، فرمت صحیح  </value>
+  </data>
+  <data name="UnhandledError" xml:space="preserve">
+    <value>بروز خطای کنترل نشده در سرور</value>
+  </data>
+  <data name="UrlInputError" xml:space="preserve">
+    <value>آدرس انتخابی صحیح نمی باشد</value>
+  </data>
+  <data name="UserModifyFailed" xml:space="preserve">
+    <value>اصلاح اطلاعات با شکست مواجه گشت</value>
+  </data>
+  <data name="YourSessionExpired" xml:space="preserve">
+    <value>محدوده زمانی استفاده از این صفحه به پایان رسیده است</value>
+  </data>
+  <data name="KenoGridNullError" xml:space="preserve">
+    <value>اطلاعاتی جهت نمایش از سرور یافت نشد</value>
+  </data>
+  <data name="KenoGridUnHandledError" xml:space="preserve">
+    <value>بروز خطای کنترل نشده در دریافت اطلاعات گرید</value>
+  </data>
+  <data name="UnhandledErrorOnLoadingPage" xml:space="preserve">
+    <value>بروز خطای کنترل نشده در فراخوانی صفحه</value>
+  </data>
+  <data name="SelectAtLeastOneRecord" xml:space="preserve">
+    <value>حداقل یک ردیف انتخاب نمایید</value>
+  </data>
+  <data name="NoSelectedAnyFile" xml:space="preserve">
+    <value>فایلی انتخاب نشده است</value>
+  </data>
+  <data name="FileAlreadyExist" xml:space="preserve">
+    <value>فایل انتخابی موجود می باشد</value>
+  </data>
+  <data name="FileExtensionIsNotValid" xml:space="preserve">
+    <value>پسوند فایل انتخابی صحیح نمی باشد</value>
+  </data>
+  <data name="UploadedFileSizeIsMoreThanMaximunFileSize" xml:space="preserve">
+    <value>حجم فایل ارسالی از حداکثر حجم مجاز بیشتر است</value>
+  </data>
+  <data name="PleaseEnterFileTitle" xml:space="preserve">
+    <value>عنوان فایل را وارد نمایید</value>
+  </data>
+  <data name="PleaseSelectOnlyOneFile" xml:space="preserve">
+    <value>لطفا فقط یک فایل را انتخاب نمایید</value>
+  </data>
+  <data name="MaximumFileUploadCount" xml:space="preserve">
+    <value>حداکثر تعداد فایل قابل آپلود {0} فایل می باشد</value>
+  </data>
+  <data name="RequestedReportNotFound" xml:space="preserve">
+    <value>گزارش مورد نظر یافت نشد</value>
+  </data>
+  <data name="AjaxRequestError" xml:space="preserve">
+    <value>ارسال درخواست Ajax با مشکل مواجه شد</value>
+  </data>
+  <data name="Error404" xml:space="preserve">
+    <value>[آدرس درخواستی یافت نشد، کد  خطا : [404</value>
+  </data>
+  <data name="Error500" xml:space="preserve">
+    <value>[خطای داخلی سرور، کد خطا : [500</value>
+  </data>
+  <data name="ErrorInParsingJson" xml:space="preserve">
+    <value>ارسال درخواست Json با مشکل مواجه شد</value>
+  </data>
+  <data name="InvalidLockLicense" xml:space="preserve">
+    <value>مجوزی جهت استفاده از سیستم یافت نشد</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>آیتمی یافت نشد</value>
+  </data>
+  <data name="NewPasswordAndNewPasswordRepeateAreNotMatch" xml:space="preserve">
+    <value>عدم تطابق کلمه عبور جدید و تکرار کلمه عبور</value>
+  </data>
+  <data name="NewUserNameRequired" xml:space="preserve">
+    <value>وارد نمودن کلمه عبور جدید الزامی می باشد</value>
+  </data>
+  <data name="PasswordIsRequired" xml:space="preserve">
+    <value>وارد نمودن کلمه عبور الزامی می باشد</value>
+  </data>
+  <data name="RepeatUserNameRequired" xml:space="preserve">
+    <value>وارد نمودن تکرار کلمه عبور الزامی می باشد</value>
+  </data>
+  <data name="RequestTimeout" xml:space="preserve">
+    <value>پایان زمان انتظار درخواست</value>
+  </data>
+  <data name="SecurityError" xml:space="preserve">
+    <value>خطای امنیتی</value>
+  </data>
+  <data name="ServerIsnotResponding" xml:space="preserve">
+    <value>پاسخی از سرور دریافت نشد</value>
+  </data>
+  <data name="SessionExpired" xml:space="preserve">
+    <value>جلسه شما منقضی شده است</value>
+  </data>
+  <data name="UnfortunatlyAnErrorHasOccurred" xml:space="preserve">
+    <value>متاسفانه خطایی رخ داده است</value>
+  </data>
+  <data name="UserAuthorizationError" xml:space="preserve">
+    <value>مجوز رسیدگی به این درخواست یافت نشد</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteThisRecord" xml:space="preserve">
+    <value>آیا از حذف این رکورد اطمینان دارید؟</value>
+  </data>
+  <data name="ChooseARecordToApplyChanges" xml:space="preserve">
+    <value>جهت اعمال تغییرات، رکورد مورد نظر را انتخاب نمایید (روی سطر مورد نظر کلیک نمایید)</value>
+  </data>
+  <data name="ChooseTheIoType" xml:space="preserve">
+    <value>نوع ورود و خروج خود را تعیین نمایید</value>
+  </data>
+  <data name="DoYouWantToLogoff" xml:space="preserve">
+    <value>آیا مایل به خروج از سامانه می باشید؟</value>
+  </data>
+  <data name="FillTheRequiredFileds" xml:space="preserve">
+    <value>فیلدهای مورد نیاز را تکمیل نمایید</value>
+  </data>
+  <data name="MissionDetailIsRequiredToRegisterThisMissionRequest" xml:space="preserve">
+    <value>وارد نمودن جزئیات جهت ثبت این ماموریت الزامی می باشد</value>
+  </data>
+  <data name="PleaseChooseTheDate" xml:space="preserve">
+    <value>لطفا تاریخ را انتخاب نمایید</value>
+  </data>
+  <data name="PleaseChooseTheTime" xml:space="preserve">
+    <value>لطفا ساعت را انتخاب نمایید</value>
+  </data>
+  <data name="SelectedDateRangeIsIncorrect" xml:space="preserve">
+    <value>محدوده تاریخ انتخابی صحیح نمی باشد</value>
+  </data>
+  <data name="ViewEventsFromTheBeginingOfWorkingDayToHour" xml:space="preserve">
+    <value>مشاهده رویدادها از ابتدای روز کاری{0} تاساعت {1} می باشد</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>فایل یافت نشد</value>
+  </data>
+  <data name="FunctionIsNotDefind" xml:space="preserve">
+    <value>متد فراخوانی شده یافت نشد</value>
+  </data>
+  <data name="LoginOnlyByDefindedLink" xml:space="preserve">
+    <value>جهت ورود به سامانه فقط از لینک تعریف شده اقدام نمایید</value>
+  </data>
+  <data name="ItemCantBeEmpty" xml:space="preserve">
+    <value>({0}) نمیتواند خالی باشد</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="NationalCodeLengthIsInvalid" xml:space="preserve">
+    <value>تعداد ارقام کد ملی باید 10 رقم باشد</value>
+  </data>
+  <data name="EmployeeRepositoryDateConflictException" xml:space="preserve">
+    <value>تاریخ این حکم با احکام دیگر این فرد تداخل دارد</value>
+  </data>
+  <data name="EmployeeRepositoryDateConflictExceptionWithBreakRule" xml:space="preserve">
+    <value>تاریخ این حکم با احکام دیگر این فرد تداخل دارد، آیا مایل به شکستن احکام این فرد هستید؟</value>
+  </data>
+  <data name="SelectedTimeRangeIsIncorrect" xml:space="preserve">
+    <value>محدوده ساعت انتخابی صحیح نمیباشد</value>
+  </data>
+  <data name="SelectedValueIsInvalid" xml:space="preserve">
+    <value>مقدار فیلد ({0}) نامعتبر است.</value>
+  </data>
+  <data name="ChangesDoseNotApplied" xml:space="preserve">
+    <value>تغییرات اعمال نشد</value>
+  </data>
+  <data name="ChooseAtleastOneOption" xml:space="preserve">
+    <value>حداقل یک گزینه را انتخاب نمایید</value>
+  </data>
+  <data name="SelectAtLeastOnePerson" xml:space="preserve">
+    <value>حداقل یک نفر را انتخاب نمایید</value>
+  </data>
+  <data name="AccessLevelDidNotSpecified" xml:space="preserve">
+    <value>سطح دسترسی مشخص نشده است</value>
+  </data>
+  <data name="NotDefinedAnyRule" xml:space="preserve">
+    <value>قانونی تعریف نشده است</value>
+  </data>
+  <data name="PlaceChart" xml:space="preserve">
+    <value>محل های خدمتی</value>
+  </data>
+  <data name="TheDurationMustBeGreaterThan" xml:space="preserve">
+    <value>مقدار طول بایستی بزرگتر از ({0}) باشد</value>
+  </data>
+  <data name="NoRuleIsDefind" xml:space="preserve">
+    <value>قانونی تعریف نشده است</value>
+  </data>
+  <data name="TheField1MustBeGreaterThanField2" xml:space="preserve">
+    <value>مقدار فیلد ({0}) باید از مقدار فیلد ({1}) بزرگتر باشد</value>
+  </data>
+  <data name="ExistContactBefor" xml:space="preserve">
+    <value>این تماس قبلا در لیست وجود دارد</value>
+  </data>
+  <data name="WorkingYearAlreadyAssigned" xml:space="preserve">
+    <value>سال کاری قبلا انتساب داده شده است.</value>
+  </data>
+  <data name="AreYouSureYouWantToDelete" xml:space="preserve">
+    <value>آیا از حذف این آیتم اطمینان دارید؟</value>
+  </data>
+  <data name="LegalNotPermitedExitValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>زمان برای مجاز کردن خروج غیر مجاز نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="MaxExtraWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>سقف اضافه کار روزانه نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="MinAfterExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>سقف اضافه کار بعد نمی تواند از کف آن کوچکتر باشد.</value>
+  </data>
+  <data name="MinBeforExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>حداکثر اضافه کار قبل نمی تواند از حداقل آن کوچکتر باشد.</value>
+  </data>
+  <data name="MinExtraWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>کف اضافه کار روزانه نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="MinExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>سقف اضافه کار روزانه نمی تواند از کف آن کوچکتر باشد.</value>
+  </data>
+  <data name="MinPresenceToAvoidAbsenceCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>حداقل زمان حضور جهت عدم محاسبه غیبت  نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="MinPresenceToComputingWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>حداقل زمان حضور جهت محاسبه کارکرد نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="PermitedDelayValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>مقدار تاخیر مجاز روزانه نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="PermitedHurryValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>مقدار تعجیل مجاز روزانه نمی تواند از طول روز بزرگتر باشد.</value>
+  </data>
+  <data name="DestinationDateOverlapedWithSourceDate" xml:space="preserve">
+    <value>تاریخ روز های  مبدا و مقصد نباید با هم تداخل داشته باشند</value>
+  </data>
+  <data name="DestinationFromDateIsGreaterThanDestinationEndDate" xml:space="preserve">
+    <value>تاریخ ابتدای مقصد از تاریخ انتهای مقصد بزرگتر است</value>
+  </data>
+  <data name="SourceFromDateIsGreaterThanSourceEndDate" xml:space="preserve">
+    <value>تاریخ ابتدای مبدا از تاریخ انتهای مبدا بزرگتر اس</value>
+  </data>
+  <data name="PersonalListIsEmpty" xml:space="preserve">
+    <value>هیچ پرسنلی انتخاب نشده است</value>
+  </data>
+  <data name="PeriodIsEmpty" xml:space="preserve">
+    <value>دوره خالی است</value>
+  </data>
+  <data name="WorkgroupIsEmpty" xml:space="preserve">
+    <value>گروه کاری خالی است</value>
+  </data>
+  <data name="VisitorAlreadyExist" xml:space="preserve">
+    <value>بدلیل وجود مشاهده کننده، امکان افزودن وجود ندارد</value>
+  </data>
+  <data name="EachRuleAtleastMustContainJobPosition" xml:space="preserve">
+    <value>هر قانون حداقل باید یک موقعیت شغلی را شامل شود</value>
+  </data>
+  <data name="ErrorInRegister" xml:space="preserve">
+    <value>خطا در ثبت</value>
+  </data>
+  <data name="SelectAAggregationFunction" xml:space="preserve">
+    <value>یک تابع تجمیعی را انتخاب نمایید</value>
+  </data>
+  <data name="TheFirstAndSecondOperandAreNotOfAKind" xml:space="preserve">
+    <value>عملوند اول و دوم از یک جنس نیستند</value>
+  </data>
+  <data name="TheFirstOperandMustBeOfNumeric" xml:space="preserve">
+    <value>عملوند اول باید از جنس عددی باشد</value>
+  </data>
+  <data name="ThisFunctionOnlyUsedInLogicalConditions" xml:space="preserve">
+    <value>این تابع فقط در شروط منطقی استفاده می شود</value>
+  </data>
+  <data name="TheOperandMustBeOfNumeric" xml:space="preserve">
+    <value>عملوند باید از جنس عددی باشد</value>
+  </data>
+  <data name="GroupsCanNotBeAddedToOperand" xml:space="preserve">
+    <value>گروه را نمی توان به عملوند افزود</value>
+  </data>
+  <data name="ThisFeatureCanNotBeAddedToTheSecondOperand" xml:space="preserve">
+    <value>این خصوصیت را نمی توان به عملوند دوم اضافه کرد</value>
+  </data>
+  <data name="SelectAAggregationProperty" xml:space="preserve">
+    <value>یک خصوصیت تجمیعی انتخاب نمایید</value>
+  </data>
+  <data name="SelectALogicalVariable" xml:space="preserve">
+    <value>یک متغیر منطقی انتخاب نمایید</value>
+  </data>
+  <data name="SelectANumericalVariable" xml:space="preserve">
+    <value>یک متغیر عددی انتخاب نمایید</value>
+  </data>
+  <data name="ThisVariableCanNotUseInComputingConditions" xml:space="preserve">
+    <value>این متفیر را نمی توان در شروط محاسباتی بکار برد</value>
+  </data>
+  <data name="ThisVariableCanNotUseInLogicalConditions" xml:space="preserve">
+    <value>این متفیر را نمی توان در شروط منطقی بکار برد</value>
+  </data>
+  <data name="OperandMustBeAggregation" xml:space="preserve">
+    <value>عملوند باید تجمیعی باشد</value>
+  </data>
+  <data name="BodyIsNotDefined" xml:space="preserve">
+    <value>بدنه فرمول تعریف نشده است</value>
+  </data>
+  <data name="CompleteAllBodyFields" xml:space="preserve">
+    <value>همه فیلدهای بدنه فرمول را کامل نمایید</value>
+  </data>
+  <data name="CompleteAllConditionFields" xml:space="preserve">
+    <value>همه فیلدهای شرط فرمول را کامل نمایید</value>
+  </data>
+  <data name="ConditionIsNotDefined" xml:space="preserve">
+    <value>شرط فرمول تعریف نشده است</value>
+  </data>
+  <data name="SelectAtLeastOneRequest" xml:space="preserve">
+    <value>هیچ درخواستی انتخاب نشده است</value>
+  </data>
+  <data name="ThisPropertyIsNotAssignable" xml:space="preserve">
+    <value>این خصوصیت قابل مقداردهی نیست</value>
+  </data>
+  <data name="TheFirstOperandAndTargetAreNotOfAKind" xml:space="preserve">
+    <value>جنس عملوند اول و هدف یکسان نیست</value>
+  </data>
+  <data name="ThisPropertyCanNotBeAddedToTheFirstOperand" xml:space="preserve">
+    <value>این خصوصیت را نمی توان به عملوند اول افزود</value>
+  </data>
+  <data name="TargetCanNotBeAssignByUser" xml:space="preserve">
+    <value>هدف قابلیت مقداردهی توسط کاربر را ندارد</value>
+  </data>
+  <data name="TheEnteredPasswordDoseNotHaveMinimumPasswordPolicyRequerments" xml:space="preserve">
+    <value>کلمه عبور وارد شده فاقد امنیت لازم جهت ذخیره می باشد</value>
+  </data>
+  <data name="TheRequestedPageNotFound" xml:space="preserve">
+    <value>صفحه فراخوانی شده یافت نشد</value>
+  </data>
+  <data name="AreYouSureToChangeWorkFlowTemplate" xml:space="preserve">
+    <value>تغییر قالب، ممکن است بر روی کارتابل مدیران این قالب تاثیر گذار باشد ، مطمئن هستید ؟</value>
+  </data>
+  <data name="YouCantAssignSomeoneAsHisHerDeputy" xml:space="preserve">
+    <value>شما نمی توانید پست سازمانی را بعنوان جانشین خودش انتخاب نمایید</value>
+  </data>
+  <data name="ErrorInGet" xml:space="preserve">
+    <value>خطا در دریافت {0}</value>
+  </data>
+  <data name="NoDataFoundFor" xml:space="preserve">
+    <value>داده ای برای {0} یافت نشد</value>
+  </data>
+  <data name="CanOnlyEditTheDefaultYear" xml:space="preserve">
+    <value>فقط امکان ویرایش سال پیش فرض وجود دارد</value>
+  </data>
+  <data name="RangIsNotCorrect" xml:space="preserve">
+    <value>محدوده وارد شده صحیح نیست</value>
+  </data>
+  <data name="TheEnteredValuesCouldNotBeEqual" xml:space="preserve">
+    <value>مقادریر وارد شده نمی توانند برابر باشند</value>
+  </data>
+  <data name="AreYouWantToUpdateOtherPreceptsOfPersonnel" xml:space="preserve">
+    <value>آیا مایل به بروزرسانی سایر احکام این پرسنل، طبق تاریخ خاتمه خدمت می باشید؟</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>آیا نسبت به انجام این عمل مطمئن هستید؟</value>
+  </data>
+  <data name="TheShiftRelocationsIsBiggerThanMaximumLimit" xml:space="preserve">
+    <value>تعداد تعویض شیفت ها بیش از حد مجاز است</value>
+  </data>
+  <data name="FieldsCouldNotBeEqual" xml:space="preserve">
+    <value>فیلد ({0}) نمیتواند با فیلد ({1}) یکسان باشد</value>
+  </data>
+  <data name="TheSourceDateRangeIsOutOfPeriodDateRange" xml:space="preserve">
+    <value>محدوده تاریخ مبدا نباید خارج از محدوده تاریخ دوره انتخابی باشد</value>
+  </data>
+  <data name="PreviouslyAssignedShiftsWillBeCleared" xml:space="preserve">
+    <value>شیفت های اختصاص داده شده قبلی پاک خواهند شد</value>
+  </data>
+  <data name="ErrorInFileOperation" xml:space="preserve">
+    <value>خطا در عملیات فایل</value>
+  </data>
+  <data name="MaximumLoginTryReached" xml:space="preserve">
+    <value>بدلیل تلاش های ناموفق مکرر جهت ورود به سیستم حساب کاربری شما برای {0} دقیقه غیر فعال شده است.</value>
+  </data>
+  <data name="MessageCannotBeEmpty" xml:space="preserve">
+    <value>متن پیام نمی تواند خالی باشد.</value>
+  </data>
+  <data name="PleaseSelectARecipient" xml:space="preserve">
+    <value>لطفا یک مخاطب انتخاب کنید</value>
+  </data>
+  <data name="LockDeactivationTypeMessage" xml:space="preserve">
+    <value>کد ایجاد شده را به قسمت پشتیبانی شرکت علم و صنعت اعلام نمایید تا امکان دریافت مجدد فایل فعالسازی در آینده فراهم شود. کد غیر فعالسازی نیز در فایلی هم نام با نوع برنامه در مسیر نصب سیستم سرویس قفل به منظور دسترسی مجدد ذخیره شده است.</value>
+  </data>
+  <data name="LockDeactivationWarning" xml:space="preserve">
+    <value>توجه: در صورت ادامه عملیات قفل شما غیر فعال خواهد شد و سیستم  دسترسی لازم برای ورود را به هیچ کس نخواهد داد تنها در صورت اطمینان از عملیاتی که می خواهید انجام دهید بر روی دکمه ادامه عملیات
+                    کلیک کنید.</value>
+  </data>
+  <data name="CannotLoginWithActiveDirectory" xml:space="preserve">
+    <value>دسترسی به سیستم از طریق اکتیو دایرکتوری امکانپذیر نیست.</value>
+  </data>
+  <data name="IsNotSynchWithServicesVersion" xml:space="preserve">
+    <value>یک نسخه جدید از برنامه موجود است ابتدا برنامه را بروزرسانی کرده سپس وارد برنامه شوید</value>
+  </data>
+  <data name="AreYouOkForCopyDayWork" xml:space="preserve">
+    <value>آیا مایل به کپی کردن روزهای فوق هستید؟</value>
+  </data>
+  <data name="SelectedPeriodDoesNotContianTheDate" xml:space="preserve">
+    <value>تارخ  در محدوده دوره انتخاب شده نیست</value>
+  </data>
+  <data name="TimeForVacationCouldNotZero" xml:space="preserve">
+    <value>مدت زمان مرخصی نمی تواند صفر باشد</value>
+  </data>
+  <data name="CalculationNotRunUntilPeriodIsOver" xml:space="preserve">
+    <value>با توجه به پایان نیافتن دوره امکان انجام محاسبات دوره ای وجود ندارد</value>
+  </data>
+  <data name="FirstDayOfPeriodShouldNotGreaterThanLast" xml:space="preserve">
+    <value>روز ابتدای دوره نباید از انتها بیشتر باشد</value>
+  </data>
+  <data name="TheField1ShouldNotBeGreaterThanField2" xml:space="preserve">
+    <value>مقدار فیلد ({0}) نباید از مقدار فیلد ({1}) بزرگتر باشد</value>
+  </data>
+  <data name="PleaseSelectParent" xml:space="preserve">
+    <value>لطفا زیر مجموعه را انتخاب نمایید</value>
+  </data>
+  <data name="CanNotAddAnOrganizationChartAsIstsSubSet" xml:space="preserve">
+    <value>یک چارت سازمانی نمی تواند به عنوان زیر مجموعه ای از خودش تعریف شود.</value>
+  </data>
+  <data name="CanNotAddAـJobPositionAsIstsSubSet" xml:space="preserve">
+    <value>یک پست سازمانی نمی تواند به عنوان زیر مجموعه ای از خودش تعریف شود.</value>
+  </data>
+  <data name="CanNotAddAJobPosiotiontAsIstsAlternateJobPosiotion" xml:space="preserve">
+    <value>یک پست سازمانی نمی تواند بعنوان جانشین خودش تعریف شود.</value>
+  </data>
+  <data name="PleaseEnterTheNameOfWorkCalendar" xml:space="preserve">
+    <value>لطفا نام تقویم کاری را وارد کنید</value>
+  </data>
+  <data name="PleaseEnterFilterName" xml:space="preserve">
+    <value>لطفا نام فیلتر را وارد کنید</value>
+  </data>
+  <data name="PleaseSelectMissionLocation" xml:space="preserve">
+    <value>لطفا محل ماموریت را انتخاب نمایید</value>
+  </data>
+  <data name="FilterListItemCantBeEmpty" xml:space="preserve">
+    <value>نام فیلتر نمیتواند خالی باشد</value>
+  </data>
+  <data name="ModuleItemCantBeEmpty" xml:space="preserve">
+    <value>ماژول نمیتواند خالی باشد</value>
+  </data>
+  <data name="UsernameItemCantBeEmpty" xml:space="preserve">
+    <value>نام کاربری نمیتواند خالی باشد</value>
+  </data>
+  <data name="QuickAccessNotAvailableBecauseTerminationDateIsOver" xml:space="preserve">
+    <value>این پرسنل به دلیل خاتمه خدمت قابل ویرایش سریع نیست</value>
+  </data>
+  <data name="StartDateIsGreaterThanEndDate" xml:space="preserve">
+    <value>تاریخ شروع بزرگتر از تاریخ پایان می باشد</value>
+  </data>
+  <data name="PleaseDefinedJobPlace" xml:space="preserve">
+    <value>محل خدمتی در فرم محل های خدمتی تعریف نشده است</value>
+  </data>
+  <data name="PleaseDefinedJobCategories" xml:space="preserve">
+    <value>لطفا دسته بندی شغلی را تعریف کنید</value>
+  </data>
+  <data name="PleaseDefinedJobInJobTitle" xml:space="preserve">
+    <value>لطفا شغلی در فرم مشاغل تعریف کنید</value>
+  </data>
+  <data name="JobPositionAssignedAtThisDate" xml:space="preserve">
+    <value>این پست سازمانی قبلا در این تاریخ اختصاص داده شده است</value>
+  </data>
+  <data name="EmployeeIsModified" xml:space="preserve">
+    <value>پرسنل ویرایش شد</value>
+  </data>
+  <data name="JobPositionIsEmpty" xml:space="preserve">
+    <value>پست سازمانی خالی است</value>
+  </data>
+  <data name="OrganizationChartIsEmpty" xml:space="preserve">
+    <value>چارت سازمانی خالی است</value>
+  </data>
+  <data name="JobPositionPreceptSaved" xml:space="preserve">
+    <value>حکم پست سازمانی ثبت شد</value>
+  </data>
+  <data name="OrganizationChartUpdated" xml:space="preserve">
+    <value>چارت سازمانی بروزرسانی شد</value>
+  </data>
+  <data name="KeyUpdated" xml:space="preserve">
+    <value>کلید ویرایش شد</value>
+  </data>
+  <data name="KeyUpdatedFailed" xml:space="preserve">
+    <value>مشکلی در ویرایش کلید به وجود آمده است</value>
+  </data>
+  <data name="KeyAssignedBefore" xml:space="preserve">
+    <value>این کلید قبلا اختصاص داده شده است</value>
+  </data>
+  <data name="EmployeeIsAdded" xml:space="preserve">
+    <value>پرسنل ایجاد شد</value>
+  </data>
+  <data name="DocumentTypeIsNotSpecified" xml:space="preserve">
+    <value>عنوان پیوست خالی است</value>
+  </data>
+  <data name="PleaseSelectMissionTransportType" xml:space="preserve">
+    <value>لطفا نوع وسیله نقلیه ماموریت را انتخاب کنید</value>
+  </data>
+  <data name="TimeForMissionCouldNotZero" xml:space="preserve">
+    <value>مدت زمان ماموریت نمی تواند صفر باشد</value>
+  </data>
+  <data name="PersonnelImportFileGuide" xml:space="preserve">
+    <value>
+                                    فایل پیوستی بایستی شامل
+                                    کد پرسنلی - نام - نام خانوادگی - نام پدر - کد ملی - شماره شناسنامه - جنسیت - تاریخ تولد - محل تولد -
+                                    نوع استخدام - تاریخ استخدام - تاریخ خاتمه - شماره کارت و شماره کارت دوم باشد
+                                     که توسط
+                                    Tab ،
+                                    کاما (,) و یا فاصله خالی از هم جدا شده باشند</value>
+  </data>
+  <data name="ValidFileExtensionIs" xml:space="preserve">
+    <value>پسوند فایل {0} قابل قبول می باشد</value>
+  </data>
+  <data name="MaximumFileUploadSizeInMBIs" xml:space="preserve">
+    <value>حداکثر حجم فایل های ارسالی در هر بار ارسال {0} مگابایت می باشد</value>
+  </data>
+  <data name="DoesContainKeyPrecepts" xml:space="preserve">
+    <value>شامل احکام کلید باشد؟</value>
+  </data>
+  <data name="MaximumFileUploadSizeInKBIs" xml:space="preserve">
+    <value>حداکثر حجم فایل های ارسالی در هر بار ارسال {0} کیلوبایت می باشد</value>
+  </data>
+  <data name="NameOfAttachedFileShouldMatchPersonnelCode" xml:space="preserve">
+    <value>نام فایل پیوستی بایستی با کد پرسنلی شخص یکسان باشد</value>
+  </data>
+  <data name="InitialVacationImportFileGuide" xml:space="preserve">
+    <value>فایل پیوستی بایستی شامل کد پرسنلی - مقدار قابل استفاده - مقدار قابل استفاده انتقالی از سال قبل - مقدار غیرقابل استفاده و مقدار سوخت شده باشد که توسط کاما و یا فاصله خالی از هم جدا شده اند</value>
+  </data>
+  <data name="KeyImportFileGuide" xml:space="preserve">
+    <value>فایل پیوستی بایستی شامل کد پرسنلی - شماره کارت و شماره کارت دوم باشد که توسط Tab یا کاما از هم جدا شده اند</value>
+  </data>
+  <data name="SpecialAddSubVacationImportFileGuide" xml:space="preserve">
+    <value>فایل پیوستی بایستی شامل کد پرسنلی و مقدار باشد که توسط کاما و یا فاصله خالی از هم جدا شده اند</value>
+  </data>
+  <data name="PleaseSelectOnePeriod" xml:space="preserve">
+    <value>لطفا یک دوره انتخاب کنید</value>
+  </data>
+  <data name="PleaseSelectOnePerson" xml:space="preserve">
+    <value>لطفا یک پرسنل انتخاب کنید</value>
+  </data>
+  <data name="MissionDetailDateNotCovergeMissionDateRange" xml:space="preserve">
+    <value>جزئیات ماموریت، محدوده تاریخی ماموریت را پوشش نمی دهد</value>
+  </data>
+  <data name="DownloadRequestAlertApplication" xml:space="preserve">
+    <value>دریافت برنامه اعلان درخواست</value>
+  </data>
+  <data name="AreYouSureForGroup" xml:space="preserve">
+    <value>آیا نسبت به انجام این عمل به صورت گروهی مطمئن هستید؟</value>
+  </data>
+  <data name="SumOfEnteredSpecialExtraworkIsBiggerThanSelectedOrganizationChartsLimit" xml:space="preserve">
+    <value>مجموع اضافه کار ویژه وارد شده بیش از حد مجاز چارت سازمانی انتخاب شده است</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>دسترسی غیر مجاز!</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>مقادیر را بدرستی وارد نمایید</value>
+  </data>
+  <data name="ParentCouldNotBeNull" xml:space="preserve">
+    <value>زیر مجموعه نمی تواند خالی باشد</value>
+  </data>
+  <data name="EnteredDatesAreInvalid" xml:space="preserve">
+    <value>تاریخ (های) وارد شده نا معتبر است.</value>
+  </data>
+  <data name="NationalCodeIsInvalid" xml:space="preserve">
+    <value>کد ملی وارد شده صحیح نمیباشد</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>لطفا منتظر باشید</value>
+  </data>
+  <data name="NameCannotBeRepetitive" xml:space="preserve">
+    <value>نام نمی تواند تکراری باشد</value>
+  </data>
+  <data name="PleaseChooseANew0For1" xml:space="preserve">
+    <value>لطفا یک {0} جدید برای {1} انتخاب نمایید</value>
+  </data>
+  <data name="ItemCanNotBeEmpty" xml:space="preserve">
+    <value>نمیتواند خالی باشد</value>
+  </data>
+  <data name="YouCantAssignThisVariableToThisCondition" xml:space="preserve">
+    <value>شما نمیتوانید این متغیر  را به این شرط اضافه کنید</value>
+  </data>
+  <data name="PleaseFirstInsertFirstOperand" xml:space="preserve">
+    <value>ابتدا عملگر اول را وارد کنید</value>
+  </data>
+  <data name="PleaseSelectVacationType" xml:space="preserve">
+    <value>لطفا نوع مرخصی را انتخاب کنید</value>
+  </data>
+  <data name="PleaseEnterTargetPartFirst" xml:space="preserve">
+    <value>لطفا ابتدا قسمت نتیجه را وارد کنید</value>
+  </data>
+  <data name="LogicalAndNumericVariablesOnlyCanUseInConditions" xml:space="preserve">
+    <value>متغیر های عددی و منطقی تنها در شرط میتوانند استفاده شوند.</value>
+  </data>
+  <data name="ApplicantAlreadyAdded" xml:space="preserve">
+    <value>این تایید کننده قبلا اضافه شده است</value>
+  </data>
+  <data name="AtLeastOneRuleIsNeeded" xml:space="preserve">
+    <value>حداقل یک قانون نیاز است</value>
+  </data>
+  <data name="JobPositionAlreadyAdded" xml:space="preserve">
+    <value>این پست سازمانی قبلا اضافه شده است</value>
+  </data>
+  <data name="ItemAlreadyAdded" xml:space="preserve">
+    <value>این آیتم قبلا اضافه شده است</value>
+  </data>
+  <data name="PleaseSelectFormulaForExport" xml:space="preserve">
+    <value>لطفا فرمولی را جهت تولید فایل خروجی انتخاب کنید</value>
+  </data>
+  <data name="MissionImportFileGuide" xml:space="preserve">
+    <value>فایل پیوستی باید شامل کد پرسنلی، نوع ماموریت، تاریخ و زمان شروع، تاریخ و زمان پایان، تاریخ و زمان درخواست،گزارش ماموریت، موضوع ماموریت، علت درخواست و توضیحات باشد که توسط کاما از هم جدا شده اند</value>
+  </data>
+  <data name="VacationImportFileGuide" xml:space="preserve">
+    <value>فایل پیوستی باید شامل کد پرسنلی، نوع مرخصی، تاریخ و زمان شروع، تاریخ و زمان پایان، تاریخ و زمان درخواست،علت درخواست و توضیحات باشد که توسط کاما از هم جدا شده اند</value>
+  </data>
+  <data name="AlternateJobPositonCanNotDefinedForOwnJobPositon" xml:space="preserve">
+    <value>پست سازمانی فعلی نمیتواند به عنوان پست سازمانی جانشین انتخاب شود</value>
+  </data>
+  <data name="SetTheDiagramPosition" xml:space="preserve">
+    <value>برای تنظیم موقعیت دیاگرام، کلید ctrl را نگه داشته و با کلیک ماوس موقعیت را تغییر دهید</value>
+  </data>
+  <data name="StringLengthMessage" xml:space="preserve">
+    <value>طول رشته وارد شده بیش از حد مجاز است</value>
+  </data>
+  <data name="IsRequired" xml:space="preserve">
+    <value> الزامی است</value>
+  </data>
+  <data name="NumberCannotBeRepetitive" xml:space="preserve">
+    <value>شماره نمی تواند تکراری باشد</value>
+  </data>
+  <data name="ReturnValueIsOnlyAvailableAsTarget" xml:space="preserve">
+    <value>مقدار برگشتی تنها در هدف قابل استفاده است</value>
+  </data>
+  <data name="ReturnValueIsOnlyAvailableInBody" xml:space="preserve">
+    <value>مقدار برگشتی تنها در بدنه قابل استفاده است</value>
+  </data>
+  <data name="TargetShouldBeReturnValueInLastBodyRow" xml:space="preserve">
+    <value>هدف در آخرین ردیف بدنه باید مقدار برگشتی باشد</value>
+  </data>
+  <data name="ItemAlreadyExists" xml:space="preserve">
+    <value>این مورد پیش از این اضافه شده است</value>
+  </data>
+  <data name="HrSentenceDetailIsRepetitive" xml:space="preserve">
+    <value>جزئیات با نوع استخدام و تاریخ اجرای مشابه قبلا اضافه شده است</value>
+  </data>
+  <data name="ThisSentenceCannotBeModifiedOrDeleted" xml:space="preserve">
+    <value>این حکم قابلیت ویرایش یا حذف ندارد</value>
+  </data>
+  <data name="PostIsRepetitive" xml:space="preserve">
+    <value>این پست پیش از این اضافه شده است</value>
+  </data>
+  <data name="ThereIsUnconfirmedSentenceForThisPersonnel" xml:space="preserve">
+    <value>برای این پرسنل حکم تأیید نشده وجود دارد</value>
+  </data>
+  <data name="HrSentenceIsInGroup" xml:space="preserve">
+    <value>این حکم به صورت گروهی ثبت شده است. آیا مایل به ویرایش و خارج شدن آن از حالت گروهی هستید؟</value>
+  </data>
+  <data name="FromDateAndToDateNotSame" xml:space="preserve">
+    <value>تاریخ شروع و پایان یکسان نمی باشد</value>
+  </data>
+  <data name="ErrorInTimeAttendanceRepository" xml:space="preserve">
+    <value>خطا در دسترسی به داده های حضور و غیاب</value>
+  </data>
+  <data name="InHourlyMissionYouCanNotSelectDetail" xml:space="preserve">
+    <value>در ماموریت ساعتی، گزینه الزام ثبت جزییات را  نمی توان انتخاب کرد</value>
+  </data>
+  <data name="StartDateTimeIsGreaterThanEndDateTime" xml:space="preserve">
+    <value>تاریخ و زمان شروع بزرگتر از تاریخ و زمان پایان می باشد</value>
+  </data>
+  <data name="PleaseSelectOneRow" xml:space="preserve">
+    <value>لطفا یک ردیف را انتخاب کنید</value>
+  </data>
+  <data name="PersonnelWorkGroupIsNotAllowdForShiftWorking" xml:space="preserve">
+    <value>گروه کاری این شخص شیفت کار یا نوبت کار نیست</value>
+  </data>
+  <data name="AccessDeniedForThisAction" xml:space="preserve">
+    <value>شما دسترسی انجام این فرآیند را ندارید</value>
+  </data>
+  <data name="EndOfAllowRangeIsSmallerThanBeginOfAllowRange" xml:space="preserve">
+    <value>پایان مجدوده مجاز کوچکتر از شروع محدوده مجاز است</value>
+  </data>
+  <data name="YourPasswordIsExpiredPleaseInsertNewPassword" xml:space="preserve">
+    <value>اعتبار رمز عبور شما به پایان رسیده است، لطفا رمز جدید را وارد کنید</value>
+  </data>
+  <data name="PasswordExpiredIn1Days" xml:space="preserve">
+    <value>رمز عبور شما تا 1 روز دیگر اعتبار خواهد داشت</value>
+  </data>
+  <data name="PasswordExpiredIn2Days" xml:space="preserve">
+    <value>رمز عبور شما تا 2 روز دیگر اعتبار خواهد داشت</value>
+  </data>
+  <data name="PasswordExpiredIn3Days" xml:space="preserve">
+    <value>رمز عبور شما تا 3 روز دیگر اعتبار خواهد داشت</value>
+  </data>
+  <data name="PasswordExpiredIn0Days" xml:space="preserve">
+    <value>اعتبار رمز عبور شما امروز به پایان می رسد</value>
+  </data>
+  <data name="YouCanNotSetOldPassword" xml:space="preserve">
+    <value>رمز عبور قبلی را نمی توانید وارد کنید</value>
+  </data>
+  <data name="YouHaveNotExtraWorkPermissionAccess" xml:space="preserve">
+    <value>شما قابلیت درخواست اضافه کار را ندارید</value>
+  </data>
+  <data name="IsInvalid" xml:space="preserve">
+    <value>نامعتبر است</value>
+  </data>
+  <data name="YouAreNotAuthenticatedToThisRequest" xml:space="preserve">
+    <value>این مجوز قابلیت درخواست ندارد</value>
+  </data>
+  <data name="YourLocationIsSavedAreYouSure" xml:space="preserve">
+    <value>موقعیت مکانی شما ذخیره می شود، آیا ادامه می دهید؟</value>
+  </data>
+  <data name="RemainingTimeToSubmitRequest" xml:space="preserve">
+    <value>زمان باقیمانده جهت ثبت درخواست</value>
+  </data>
+  <data name="PictureIsRequired" xml:space="preserve">
+    <value>تصویر اجباری می باشد</value>
+  </data>
+  <data name="AddMinimumOneRow" xml:space="preserve">
+    <value>حداقل یک ردیف اضافه نمایید</value>
+  </data>
+  <data name="ShiftIsNotSelected" xml:space="preserve">
+    <value>هیج شیفتی انتخاب نشده است</value>
+  </data>
+  <data name="MobileLockInformationNotAvailable" xml:space="preserve">
+    <value>اطلاعات قفل موبایل یافت نشد</value>
+  </data>
+  <data name="ANewVacationRequestIsRegistered" xml:space="preserve">
+    <value>یک درخواست مرخصی جدید جهت بررسی در سیستم ثبت شده است.</value>
+  </data>
+  <data name="AreYouSureForConfirmRequest" xml:space="preserve">
+    <value>آیا نسبت به تایید درخواست مطمئن هستید؟</value>
+  </data>
+  <data name="AreYouSureForRefuseRequest" xml:space="preserve">
+    <value>آیا نسبت به رد درخواست مطمئن هستید؟</value>
+  </data>
+  <data name="TodayIs0sBirthday" xml:space="preserve">
+    <value>امروز تولد 0 است</value>
+  </data>
+  <data name="PleaseCallNetworkManager" xml:space="preserve">
+    <value>لطفا با مسئول شبکه تماس بگیرید</value>
+  </data>
+  <data name="AvgOfTransactionCountWithComparisonOfLastMonthPerDay" xml:space="preserve">
+    <value>میانگین حجم و تعداد معاملات در مقایسه با ماه گذشته</value>
+  </data>
+  <data name="AvgOfTransactionCountWithComparisonOfLastYearPerDay" xml:space="preserve">
+    <value>میانگین حجم و تعداد معاملات در مقایسه با سال گذشته</value>
+  </data>
+  <data name="ForMoreInformationScanIt" xml:space="preserve">
+    <value>برای اطلاعات بیشتر اسکن کنید</value>
+  </data>
+  <data name="PleaseActivateTheSoftware" xml:space="preserve">
+    <value>لطفا نرم افزار خود را فعال نمایید</value>
+  </data>
+  <data name="ShareholderNotFound" xml:space="preserve">
+    <value>سهامدار مورد نظر یافت نشد</value>
+  </data>
+  <data name="SubmitedMorethan10RecordIsNotAllowd" xml:space="preserve">
+    <value>ثبت بیش از 10 ردیف مجاز نمی باشد</value>
+  </data>
+  <data name="BBSCodeISNotValid" xml:space="preserve">
+    <value>کد بورسی وارد شده معتبر نمی باشد</value>
+  </data>
+  <data name="UseBBSCodeAndCertNoForLogin" xml:space="preserve">
+    <value>از کد بورسی به عنوان نام کاربری و شماره شناسنامه به عنوان رمز عبور جهت ورود استفاده نمایید</value>
+  </data>
+  <data name="PleaseSelectCompany" xml:space="preserve">
+    <value>لطفا نام شرکت مورد نظر را انتخاب نمایید</value>
+  </data>
+  <data name="ByAcceptingThisCertificateImGoToMeetingOnTime" xml:space="preserve">
+    <value>با قبول این توافق نامه متعهد میشوم در روز و ساعت مربوطه در محل مجمع حضور به هم رسانیده</value>
+  </data>
+  <data name="GiveIt" xml:space="preserve">
+    <value>برسانم</value>
+  </data>
+  <data name="RecievingPaperToSubmitStockDepartment" xml:space="preserve">
+    <value>برگه دریافت شده را به تایید امور سهام</value>
+  </data>
+  <data name="ForMoreInfoPleaseVisitThisPage" xml:space="preserve">
+    <value>جهت کسب اطلاعات بیشتر به آدرس زیر مراجعه فرمایید</value>
+  </data>
+</root>

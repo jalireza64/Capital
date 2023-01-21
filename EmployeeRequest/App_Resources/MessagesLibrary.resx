@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnotherUserLoggedWithYourData" xml:space="preserve">
+    <value>There is Another User Logged With Your Data</value>
+  </data>
+  <data name="CatchError" xml:space="preserve">
+    <value>Unfortunately an Error Has Occurred</value>
+  </data>
+  <data name="DatetimeNotValid" xml:space="preserve">
+    <value>Datetime Value Entered is Not Valid</value>
+  </data>
+  <data name="EmailNotValid" xml:space="preserve">
+    <value>Email Address You Entered is Not Valid</value>
+  </data>
+  <data name="EnteredDataHasConflict" xml:space="preserve">
+    <value>There is Conflict. Please Verify Your Data Value</value>
+  </data>
+  <data name="ErrorInFetchWindowIdentity" xml:space="preserve">
+    <value>Error While Transfering Data from Active Directory Domain Services</value>
+  </data>
+  <data name="ErrorInSetActiveDirectoryConfigs" xml:space="preserve">
+    <value>Error in Set Active Directory Configuration</value>
+  </data>
+  <data name="ForUseThisOptionShouldHaveActiveDirecory" xml:space="preserve">
+    <value>For the Usage of This Pption, System Must be Set on an Active Directory domain</value>
+  </data>
+  <data name="InpusError" xml:space="preserve">
+    <value>Please Enter a Valid Value</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Password is not valid</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>Username is not valid</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>The Username or Password is Not Valid</value>
+  </data>
+  <data name="LetLangErrorInput" xml:space="preserve">
+    <value>The field {0} Should be Formatted like Lat, Longitude </value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>You Have Failed to Log in</value>
+  </data>
+  <data name="LoginIsOk" xml:space="preserve">
+    <value>Login Successful</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>No data found...</value>
+  </data>
+  <data name="NoLicenseFoundForthisRequest" xml:space="preserve">
+    <value>no license found for this request</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>notice</value>
+  </data>
+  <data name="Notices" xml:space="preserve">
+    <value>notices</value>
+  </data>
+  <data name="NumericInputError" xml:space="preserve">
+    <value>value should be number</value>
+  </data>
+  <data name="OldPasswordIsIncorrect" xml:space="preserve">
+    <value>the password has entered is incorrect (password is not correct)</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>unfortunately the operation failed. Please try later.</value>
+  </data>
+  <data name="OperationSuccessed" xml:space="preserve">
+    <value>The Operation Completed Successfully</value>
+  </data>
+  <data name="PeriodCalculationResultInSelectedPeriosIsNull" xml:space="preserve">
+    <value>there is no calculation for the selected period</value>
+  </data>
+  <data name="PleaseCheckIISConfiguration" xml:space="preserve">
+    <value>please check iis web service configuraton for using this option.</value>
+  </data>
+  <data name="RangeError" xml:space="preserve">
+    <value>data entered is out of range. number must be between {1} and {2}</value>
+  </data>
+  <data name="ReadDataError" xml:space="preserve">
+    <value>unfortunately an error occurred while reading data.</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>value inserting is required</value>
+  </data>
+  <data name="RequiredEntity" xml:space="preserve">
+    <value>The field {0} is required.</value>
+  </data>
+  <data name="ResultIsEmpty" xml:space="preserve">
+    <value>No result.no data found in this request</value>
+  </data>
+  <data name="SendingDataFailed" xml:space="preserve">
+    <value>unfortunately there is an error sending the information</value>
+  </data>
+  <data name="SendMessageSuccessed" xml:space="preserve">
+    <value>your message was sent successfully 
+ .</value>
+  </data>
+  <data name="ServiceConnectError" xml:space="preserve">
+    <value>failed to connect to the service ( error connecting to service)</value>
+  </data>
+  <data name="SignoutError" xml:space="preserve">
+    <value>signing out operation has failed.please try later</value>
+  </data>
+  <data name="StringLengthError" xml:space="preserve">
+    <value>the minimum length of word ( number of character) is {1} and the maximum  length of word ( number of character) is {2}. Please try again</value>
+  </data>
+  <data name="TellInputError" xml:space="preserve">
+    <value>the datavalue entered in not valid for this field {0}.it must be ###-#######
+</value>
+  </data>
+  <data name="UnhandledError" xml:space="preserve">
+    <value>not handled error has occurred in server</value>
+  </data>
+  <data name="UrlInputError" xml:space="preserve">
+    <value>the selected adrress is not correct (the selected adrress is not correct)</value>
+  </data>
+  <data name="UserModifyFailed" xml:space="preserve">
+    <value>Failed to Modify Data</value>
+  </data>
+  <data name="YourSessionExpired" xml:space="preserve">
+    <value>Session Expired Due to Inactivity</value>
+  </data>
+  <data name="KenoGridNullError" xml:space="preserve">
+    <value>an Error Occurred on Grid</value>
+  </data>
+  <data name="KenoGridUnHandledError" xml:space="preserve">
+    <value>Unhandled Error  Occurred on Grid</value>
+  </data>
+  <data name="UnhandledErrorOnLoadingPage" xml:space="preserve">
+    <value>Unhandled error occurred on loading page.</value>
+  </data>
+  <data name="SelectAtLeastOneRecord" xml:space="preserve">
+    <value>Select atleast one Record</value>
+  </data>
+  <data name="NoSelectedAnyFile" xml:space="preserve">
+    <value>No selected any file</value>
+  </data>
+  <data name="FileAlreadyExist" xml:space="preserve">
+    <value>File Already Exist</value>
+  </data>
+  <data name="FileExtensionIsNotValid" xml:space="preserve">
+    <value>File Extension is Not Valid</value>
+  </data>
+  <data name="UploadedFileSizeIsMoreThanMaximunFileSize" xml:space="preserve">
+    <value>Uploaded file size is more than maximun file size</value>
+  </data>
+  <data name="PleaseEnterFileTitle" xml:space="preserve">
+    <value>Please enter file title</value>
+  </data>
+  <data name="PleaseSelectOnlyOneFile" xml:space="preserve">
+    <value>Please select only one file</value>
+  </data>
+  <data name="MaximumFileUploadCount" xml:space="preserve">
+    <value>Maximum File Upload Count is {0}</value>
+  </data>
+  <data name="RequestedReportNotFound" xml:space="preserve">
+    <value>Requested report not found</value>
+  </data>
+  <data name="AjaxRequestError" xml:space="preserve">
+    <value>Error in Proccecing Ajax Request</value>
+  </data>
+  <data name="Error404" xml:space="preserve">
+    <value>[404] Requested Address Not Found</value>
+  </data>
+  <data name="Error500" xml:space="preserve">
+    <value>[500] Internal Server Error</value>
+  </data>
+  <data name="ErrorInParsingJson" xml:space="preserve">
+    <value>Error in Parsing Json Format</value>
+  </data>
+  <data name="InvalidLockLicense" xml:space="preserve">
+    <value>Invalid Lock License</value>
+  </data>
+  <data name="NewUserNameRequired" xml:space="preserve">
+    <value>New user name required</value>
+  </data>
+  <data name="RepeatUserNameRequired" xml:space="preserve">
+    <value>Repeat user name field required</value>
+  </data>
+  <data name="RequestTimeout" xml:space="preserve">
+    <value>Request timeout</value>
+  </data>
+  <data name="SecurityError" xml:space="preserve">
+    <value>Security error</value>
+  </data>
+  <data name="ServerIsnotResponding" xml:space="preserve">
+    <value>Server Is not Responding</value>
+  </data>
+  <data name="SessionExpired" xml:space="preserve">
+    <value>Session expired</value>
+  </data>
+  <data name="UnfortunatlyAnErrorHasOccurred" xml:space="preserve">
+    <value>Unfortunatly an error has occurred</value>
+  </data>
+  <data name="UserAuthorizationError" xml:space="preserve">
+    <value>You are not authorized to do requested operation</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>Item Not Found</value>
+  </data>
+  <data name="NewPasswordAndNewPasswordRepeateAreNotMatch" xml:space="preserve">
+    <value>New Password and New Password Repeate Aren't Match</value>
+  </data>
+  <data name="PasswordIsRequired" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteThisRecord" xml:space="preserve">
+    <value>Are You Sure You Want to Delete This Record</value>
+  </data>
+  <data name="ChooseARecordToApplyChanges" xml:space="preserve">
+    <value>Choose a Record to Apply Changes</value>
+  </data>
+  <data name="ChooseTheIoType" xml:space="preserve">
+    <value>Choose the Enter/Exit Type</value>
+  </data>
+  <data name="FillTheRequiredFileds" xml:space="preserve">
+    <value>Fill the Required Fileds</value>
+  </data>
+  <data name="MissionDetailIsRequiredToRegisterThisMissionRequest" xml:space="preserve">
+    <value>Mission Detail is Required to Register This Mission Request</value>
+  </data>
+  <data name="PleaseChooseTheDate" xml:space="preserve">
+    <value>Please choose the date</value>
+  </data>
+  <data name="PleaseChooseTheTime" xml:space="preserve">
+    <value>Please choose the time</value>
+  </data>
+  <data name="SelectedDateRangeIsIncorrect" xml:space="preserve">
+    <value>Selected date range is incorrect</value>
+  </data>
+  <data name="ViewEventsFromTheBeginingOfWorkingDayToHour" xml:space="preserve">
+    <value> View Events from the Begining of Date {0} to {1}</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File Not Found</value>
+  </data>
+  <data name="FunctionIsNotDefind" xml:space="preserve">
+    <value>The Function called is Not Found.</value>
+  </data>
+  <data name="LoginOnlyByDefindedLink" xml:space="preserve">
+    <value>Try to login from definded link</value>
+  </data>
+  <data name="ItemCantBeEmpty" xml:space="preserve">
+    <value>{0} Cant Be Empty</value>
+  </data>
+  <data name="NationalCodeLengthIsInvalid" xml:space="preserve">
+    <value>The National Code Length Must Be 10 Digit</value>
+  </data>
+  <data name="EmployeeRepositoryDateConflictException" xml:space="preserve">
+    <value>EmployeeRepositoryDateConflictException</value>
+  </data>
+  <data name="EmployeeRepositoryDateConflictExceptionWithBreakRule" xml:space="preserve">
+    <value>EmployeeRepositoryDateConflictExceptionWithBreakRule</value>
+  </data>
+  <data name="SelectedTimeRangeIsIncorrect" xml:space="preserve">
+    <value>Selected Time Range Is Incorrect</value>
+  </data>
+  <data name="SelectedValueIsInvalid" xml:space="preserve">
+    <value>Selected {0} Is Invalid.</value>
+  </data>
+  <data name="ChangesDoseNotApplied" xml:space="preserve">
+    <value>ChangesDoseNotApplied</value>
+  </data>
+  <data name="ChooseAtleastOneOption" xml:space="preserve">
+    <value>Choose at least one option</value>
+  </data>
+  <data name="SelectAtLeastOnePerson" xml:space="preserve">
+    <value>Select atleast one Record</value>
+  </data>
+  <data name="AccessLevelDidNotSpecified" xml:space="preserve">
+    <value>Access Level Did Not Specified</value>
+  </data>
+  <data name="NotDefinedAnyRule" xml:space="preserve">
+    <value>Not Defined Any Rule</value>
+  </data>
+  <data name="TheDurationMustBeGreaterThan" xml:space="preserve">
+    <value>The Duration Must Be Greater Than {0}</value>
+  </data>
+  <data name="NoRuleIsDefind" xml:space="preserve">
+    <value>No Rule Is Defind</value>
+  </data>
+  <data name="TheField1MustBeGreaterThanField2" xml:space="preserve">
+    <value>The Field {0} Must Be Greater Than Field {1}</value>
+  </data>
+  <data name="WorkingYearAlreadyAssigned" xml:space="preserve">
+    <value>WorkingYear Already Assigned</value>
+  </data>
+  <data name="ExistContactBefor" xml:space="preserve">
+    <value>This contact exists befor</value>
+  </data>
+  <data name="AreYouSureYouWantToDelete" xml:space="preserve">
+    <value>AreYouSureYouWantToDelete ?</value>
+  </data>
+  <data name="LegalNotPermitedExitValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Legal Not Permited Exit Value Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="MaxExtraWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Max Extra Work Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="MinAfterExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>Min After Extra Work Cant Be Less Than Day Length</value>
+  </data>
+  <data name="MinBeforExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>Min Befor Extra Work Cant Be Less Than Day Length</value>
+  </data>
+  <data name="MinExtraWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Min Extra Work Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="MinExtraWorkCantBeLessThanDayLength" xml:space="preserve">
+    <value>Min Extra Work Cant Be Less Than Day Length</value>
+  </data>
+  <data name="MinPresenceToAvoidAbsenceCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Min Presence To Avoid Absence Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="MinPresenceToComputingWorkCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Min Presence To Computing Work Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="PermitedDelayValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Permited Delay Value Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="PermitedHurryValueCantBeGreaterThanDayLength" xml:space="preserve">
+    <value>Permited Hurry Value Cant Be Greater Than Day Length</value>
+  </data>
+  <data name="DestinationDateOverlapedWithSourceDate" xml:space="preserve">
+    <value>Destination Date Overlaped With Source Date</value>
+  </data>
+  <data name="DestinationFromDateIsGreaterThanDestinationEndDate" xml:space="preserve">
+    <value>Destination From Date Is Greater Than Destination End Date</value>
+  </data>
+  <data name="SourceFromDateIsGreaterThanSourceEndDate" xml:space="preserve">
+    <value>Source From Date Is Greater Than Source End Date</value>
+  </data>
+  <data name="PersonalListIsEmpty" xml:space="preserve">
+    <value>Personal list is empty</value>
+  </data>
+  <data name="PeriodIsEmpty" xml:space="preserve">
+    <value>PeriodIsEmpty</value>
+  </data>
+  <data name="WorkgroupIsEmpty" xml:space="preserve">
+    <value>WorkgroupIsEmpty</value>
+  </data>
+  <data name="VisitorAlreadyExist" xml:space="preserve">
+    <value>Visitor Already Exist</value>
+  </data>
+  <data name="EachRuleAtleastMustContainJobPosition" xml:space="preserve">
+    <value>Each Rule Atleast Must Contain one JobPosition</value>
+  </data>
+  <data name="ErrorInRegister" xml:space="preserve">
+    <value>Error In Register</value>
+  </data>
+  <data name="SelectAAggregationFunction" xml:space="preserve">
+    <value>Select A Aggregation Function</value>
+  </data>
+  <data name="TheFirstAndSecondOperandAreNotOfAKind" xml:space="preserve">
+    <value>The first and second operands are not of a kind</value>
+  </data>
+  <data name="TheFirstOperandMustBeOfNumeric" xml:space="preserve">
+    <value>The first operand must be of numeric</value>
+  </data>
+  <data name="ThisFunctionOnlyUsedInLogicalConditions" xml:space="preserve">
+    <value>This Function Only Used In Logical Conditions</value>
+  </data>
+  <data name="TheOperandMustBeOfNumeric" xml:space="preserve">
+    <value>The Operand Must Be Of Numeric</value>
+  </data>
+  <data name="GroupsCanNotBeAddedToOperand" xml:space="preserve">
+    <value>Groups can not be added to operand</value>
+  </data>
+  <data name="ThisFeatureCanNotBeAddedToTheSecondOperand" xml:space="preserve">
+    <value>This feature can be added to the second operand</value>
+  </data>
+  <data name="SelectAAggregationProperty" xml:space="preserve">
+    <value>Select A Aggregation Property</value>
+  </data>
+  <data name="SelectALogicalVariable" xml:space="preserve">
+    <value>Select A Logical Variable</value>
+  </data>
+  <data name="SelectANumericalVariable" xml:space="preserve">
+    <value>Select A Numerical Variable</value>
+  </data>
+  <data name="ThisVariableCanNotUseInComputingConditions" xml:space="preserve">
+    <value>This Variable Can Not Use In Computing Conditions</value>
+  </data>
+  <data name="ThisVariableCanNotUseInLogicalConditions" xml:space="preserve">
+    <value>This Variable Can Not Use In Logical Conditions</value>
+  </data>
+  <data name="OperandMustBeAggregation" xml:space="preserve">
+    <value>Operand Must Be Aggregation</value>
+  </data>
+  <data name="BodyIsNotDefined" xml:space="preserve">
+    <value>Body is not defined</value>
+  </data>
+  <data name="CompleteAllBodyFields" xml:space="preserve">
+    <value>Complete All Body Fields</value>
+  </data>
+  <data name="CompleteAllConditionFields" xml:space="preserve">
+    <value>Complete All Condition Fields</value>
+  </data>
+  <data name="ConditionIsNotDefined" xml:space="preserve">
+    <value>condition is not defined</value>
+  </data>
+  <data name="SelectAtLeastOneRequest" xml:space="preserve">
+    <value>There are any request select</value>
+  </data>
+  <data name="ThisPropertyIsNotAssignable" xml:space="preserve">
+    <value>This Property Is Not Assignable</value>
+  </data>
+  <data name="TheFirstOperandAndTargetAreNotOfAKind" xml:space="preserve">
+    <value>The First Operand And Target Are Not Of A Kind</value>
+  </data>
+  <data name="ThisPropertyCanNotBeAddedToTheFirstOperand" xml:space="preserve">
+    <value>This Property Can Not Be Added To The First Operand</value>
+  </data>
+  <data name="TargetCanNotBeAssignByUser" xml:space="preserve">
+    <value>Target Can Not Be Assign By User</value>
+  </data>
+  <data name="TheEnteredPasswordDoseNotHaveMinimumPasswordPolicyRequerments" xml:space="preserve">
+    <value>The Entered Password Dose Not have Minimum Password Policy Requerments</value>
+  </data>
+  <data name="TheRequestedPageNotFound" xml:space="preserve">
+    <value>The Requested Page Not Found</value>
+  </data>
+  <data name="AreYouSureToChangeWorkFlowTemplate" xml:space="preserve">
+    <value>Are You Sure To Change WorkFlow Template</value>
+  </data>
+  <data name="YouCantAssignSomeoneAsHisHerDeputy" xml:space="preserve">
+    <value>You Cant Assign Someone As His / Her Deputy</value>
+  </data>
+  <data name="ErrorInGet" xml:space="preserve">
+    <value>Error In Get {0}</value>
+  </data>
+  <data name="NoDataFoundFor" xml:space="preserve">
+    <value>No Data Found For {0}</value>
+  </data>
+  <data name="CanOnlyEditTheDefaultYear" xml:space="preserve">
+    <value>Can Only Edit TheDefault Year</value>
+  </data>
+  <data name="RangIsNotCorrect" xml:space="preserve">
+    <value>Range is not correct</value>
+  </data>
+  <data name="TheEnteredValuesCouldNotBeEqual" xml:space="preserve">
+    <value>The Entered Values Could Not Be Equal</value>
+  </data>
+  <data name="AreYouWantToUpdateOtherPreceptsOfPersonnel" xml:space="preserve">
+    <value>Are You Want To Update Other Precepts Of Personnel </value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are You Sure</value>
+  </data>
+  <data name="TheShiftRelocationsIsBiggerThanMaximumLimit" xml:space="preserve">
+    <value>The Shif tRelocations Is Bigger Than Maximum Limit</value>
+  </data>
+  <data name="FieldsCouldNotBeEqual" xml:space="preserve">
+    <value>The field ({0}) could not be equal with filed ({1})</value>
+  </data>
+  <data name="TheSourceDateRangeIsOutOfPeriodDateRange" xml:space="preserve">
+    <value>The Source Date Range Is Out Of Selected Period Date Range</value>
+  </data>
+  <data name="PreviouslyAssignedShiftsWillBeCleared" xml:space="preserve">
+    <value>Previously assigned shifts will be cleared</value>
+  </data>
+  <data name="ErrorInFileOperation" xml:space="preserve">
+    <value>Error In File Operation</value>
+  </data>
+  <data name="MaximumLoginTryReached" xml:space="preserve">
+    <value>Maximum login try reached your account locked for {0} minute(s) .</value>
+  </data>
+  <data name="MessageCannotBeEmpty" xml:space="preserve">
+    <value>Message Cannot Be Empty</value>
+  </data>
+  <data name="PleaseSelectARecipient" xml:space="preserve">
+    <value>Please Select A Recipient</value>
+  </data>
+  <data name="LockDeactivationTypeMessage" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="LockDeactivationWarning" xml:space="preserve">
+    <value>Warning : After deactivation operation system wouldn't be accessible for any user
+.</value>
+  </data>
+  <data name="CannotLoginWithActiveDirectory" xml:space="preserve">
+    <value>Canno tLogin With ActiveDirectory</value>
+  </data>
+  <data name="IsNotSynchWithServicesVersion" xml:space="preserve">
+    <value>A Newer Version Of Application Is Avilable .Please Update to Latest Version.</value>
+  </data>
+  <data name="AreYouOkForCopyDayWork" xml:space="preserve">
+    <value>Are You Ok For Copy Day Work?</value>
+  </data>
+  <data name="SelectedPeriodDoesNotContianTheDate" xml:space="preserve">
+    <value>Selected Period Does No Contian The Date</value>
+  </data>
+  <data name="TimeForVacationCouldNotZero" xml:space="preserve">
+    <value>Time For Vacation Could Not Be Zero</value>
+  </data>
+  <data name="CalculationNotRunUntilPeriodIsOver" xml:space="preserve">
+    <value>Calculation Not Run Until Period Is Over</value>
+  </data>
+  <data name="FirstDayOfPeriodShouldNotGreaterThanLast" xml:space="preserve">
+    <value>First Day Of Period Should Not Greater Than Last</value>
+  </data>
+  <data name="TheField1ShouldNotBeGreaterThanField2" xml:space="preserve">
+    <value>The Field {0} Should Not Be Greater Than Field {1}</value>
+  </data>
+  <data name="PleaseSelectParent" xml:space="preserve">
+    <value>Please Select Parent</value>
+  </data>
+  <data name="CanNotAddAnOrganizationChartAsIstsSubSet" xml:space="preserve">
+    <value>Can Not Add An Organization Chart As Ists SubSet</value>
+  </data>
+  <data name="CanNotAddAـJobPositionAsIstsSubSet" xml:space="preserve">
+    <value>CanNot Add Aـ Job Position As Ists SubSet</value>
+  </data>
+  <data name="CanNotAddAJobPosiotiontAsIstsAlternateJobPosiotion" xml:space="preserve">
+    <value>Can Not Add A Job Posiotiont As Ists Alternate JobPosiotion</value>
+  </data>
+  <data name="PleaseEnterTheNameOfWorkCalendar" xml:space="preserve">
+    <value>Please Enter The Name Of Work Calendar</value>
+  </data>
+  <data name="PleaseEnterFilterName" xml:space="preserve">
+    <value>Please Enter Filter Name</value>
+  </data>
+  <data name="PleaseSelectMissionLocation" xml:space="preserve">
+    <value>Please Select Mission Location</value>
+  </data>
+  <data name="FilterListItemCantBeEmpty" xml:space="preserve">
+    <value>Filter List Item Cant Be Empty</value>
+  </data>
+  <data name="ModuleItemCantBeEmpty" xml:space="preserve">
+    <value>Module Item Cant Be Empty</value>
+  </data>
+  <data name="UsernameItemCantBeEmpty" xml:space="preserve">
+    <value>Username Item Cant Be Empty</value>
+  </data>
+  <data name="QuickAccessNotAvailableBecauseTerminationDateIsOver" xml:space="preserve">
+    <value>Quick Access Not Available Because Termination Date Is Over</value>
+  </data>
+  <data name="StartDateIsGreaterThanEndDate" xml:space="preserve">
+    <value>Start Date Is Greater Than End Date</value>
+  </data>
+  <data name="PleaseDefinedJobPlace" xml:space="preserve">
+    <value>Please Defined Job Place</value>
+  </data>
+  <data name="PleaseDefinedJobCategories" xml:space="preserve">
+    <value>Please Defined Job Categories</value>
+  </data>
+  <data name="PleaseDefinedJobInJobTitle" xml:space="preserve">
+    <value>Please Defined Job In Job Title</value>
+  </data>
+  <data name="JobPositionAssignedAtThisDate" xml:space="preserve">
+    <value>Job Position Assigned At This Date</value>
+  </data>
+  <data name="EmployeeIsModified" xml:space="preserve">
+    <value>Employee Is Modified</value>
+  </data>
+  <data name="JobPositionIsEmpty" xml:space="preserve">
+    <value>Job Position Is Empty</value>
+  </data>
+  <data name="OrganizationChartIsEmpty" xml:space="preserve">
+    <value>Organization Chart Is Empty</value>
+  </data>
+  <data name="JobPositionPreceptSaved" xml:space="preserve">
+    <value>Job Position Precept Saved</value>
+  </data>
+  <data name="OrganizationChartUpdated" xml:space="preserve">
+    <value>Organization Chart Updated</value>
+  </data>
+  <data name="KeyUpdated" xml:space="preserve">
+    <value>Key Updated</value>
+  </data>
+  <data name="KeyUpdatedFailed" xml:space="preserve">
+    <value>Key Updated Failed</value>
+  </data>
+  <data name="KeyAssignedBefore" xml:space="preserve">
+    <value>Key Assigned Before</value>
+  </data>
+  <data name="EmployeeIsAdded" xml:space="preserve">
+    <value>Employee Is Added</value>
+  </data>
+  <data name="DocumentTypeIsNotSpecified" xml:space="preserve">
+    <value>Attachment title is not specified</value>
+  </data>
+  <data name="PleaseSelectMissionTransportType" xml:space="preserve">
+    <value>Please Select Mission Transport Type</value>
+  </data>
+  <data name="TimeForMissionCouldNotZero" xml:space="preserve">
+    <value>Time For Mission Could Not Be Zero</value>
+  </data>
+  <data name="PersonnelImportFileGuide" xml:space="preserve">
+    <value>Attached file should contain: Personnel Code - Name - Family Name - Father's Name - National Code - Birth Certificate Id - Gender - Date of Birth - Place of Birth - Employment Mode - Employment Date - End Date - Cart Number and Second Cart Number which are separated by Tab, Comma or White Space.</value>
+  </data>
+  <data name="ValidFileExtensionIs" xml:space="preserve">
+    <value>{0} File Extension Is Valid</value>
+  </data>
+  <data name="MaximumFileUploadSizeInMBIs" xml:space="preserve">
+    <value>Maximum File Upload Size Is {0} Megabytes</value>
+  </data>
+  <data name="DoesContainKeyPrecepts" xml:space="preserve">
+    <value>Does Contain Key Percepts?</value>
+  </data>
+  <data name="MaximumFileUploadSizeInKBIs" xml:space="preserve">
+    <value>Maximum File Upload Size Is {0} Kilobytes</value>
+  </data>
+  <data name="NameOfAttachedFileShouldMatchPersonnelCode" xml:space="preserve">
+    <value>Name of Attached File Should Match Personnel Code</value>
+  </data>
+  <data name="InitialVacationImportFileGuide" xml:space="preserve">
+    <value>Attached file should contain: Personnel Code - Usable Value - Last Year Useable Transfer Value -  Unusable Value and Burnt Value which are separated by Comma or White Space</value>
+  </data>
+  <data name="KeyImportFileGuide" xml:space="preserve">
+    <value>Attached file should contain: Personnel Code - Card Number and Second Card Number which are separated by Tab, Comma or White Space.</value>
+  </data>
+  <data name="SpecialAddSubVacationImportFileGuide" xml:space="preserve">
+    <value>Attached file should contain: Personnel Code and Value which are separated by Comma or White Space</value>
+  </data>
+  <data name="PleaseSelectOnePeriod" xml:space="preserve">
+    <value>Please Select One Period</value>
+  </data>
+  <data name="PleaseSelectOnePerson" xml:space="preserve">
+    <value>Please Select One Person</value>
+  </data>
+  <data name="MissionDetailDateNotCovergeMissionDateRange" xml:space="preserve">
+    <value>Mission Detail Date Not Coverge Mission Date Range</value>
+  </data>
+  <data name="DownloadRequestAlertApplication" xml:space="preserve">
+    <value>Download Request Alert Application</value>
+  </data>
+  <data name="AreYouSureForGroup" xml:space="preserve">
+    <value>Are You Sure For Group</value>
+  </data>
+  <data name="SumOfEnteredSpecialExtraworkIsBiggerThanSelectedOrganizationChartsLimit" xml:space="preserve">
+    <value>Sum of Entered Special Extrawork is Bigger Than Selected Organization Chart's Limit</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Access Denied !</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>Please Enter a Valid Value</value>
+  </data>
+  <data name="ParentCouldNotBeNull" xml:space="preserve">
+    <value>Parent Could Not Be Null</value>
+  </data>
+  <data name="EnteredDatesAreInvalid" xml:space="preserve">
+    <value>Entered Date(s) Are Invalid</value>
+  </data>
+  <data name="NationalCodeIsInvalid" xml:space="preserve">
+    <value>National Code Is Invalid</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please Wait</value>
+  </data>
+  <data name="NameCannotBeRepetitive" xml:space="preserve">
+    <value>Name Cannot Be Repetitive</value>
+  </data>
+  <data name="PleaseChooseANew0For1" xml:space="preserve">
+    <value>Please Choose A New {0} For {1}</value>
+  </data>
+  <data name="ItemCanNotBeEmpty" xml:space="preserve">
+    <value>Can Not Be Empty</value>
+  </data>
+  <data name="YouCantAssignThisVariableToThisCondition" xml:space="preserve">
+    <value>You Cant Assign This Variable To This Condition</value>
+  </data>
+  <data name="PleaseFirstInsertFirstOperand" xml:space="preserve">
+    <value>Please First Insert First Operand</value>
+  </data>
+  <data name="PleaseSelectVacationType" xml:space="preserve">
+    <value>Please Select Vacation Type</value>
+  </data>
+  <data name="PleaseEnterTargetPartFirst" xml:space="preserve">
+    <value>Please Enter Target Part First</value>
+  </data>
+  <data name="LogicalAndNumericVariablesOnlyCanUseInConditions" xml:space="preserve">
+    <value>Logical And Numeric Variables Only Can Use In Conditions</value>
+  </data>
+  <data name="ApplicantAlreadyAdded" xml:space="preserve">
+    <value>Applicant Already Added</value>
+  </data>
+  <data name="AtLeastOneRuleIsNeeded" xml:space="preserve">
+    <value>At Least One Rule is Needed</value>
+  </data>
+  <data name="JobPositionAlreadyAdded" xml:space="preserve">
+    <value>Job Position Already Added</value>
+  </data>
+  <data name="ItemAlreadyAdded" xml:space="preserve">
+    <value>Item Already Added</value>
+  </data>
+  <data name="PleaseSelectFormulaForExport" xml:space="preserve">
+    <value>Please Select Formula(s) For Export</value>
+  </data>
+  <data name="MissionImportFileGuide" xml:space="preserve">
+    <value>Mission Import File Guide</value>
+  </data>
+  <data name="VacationImportFileGuide" xml:space="preserve">
+    <value>Vacation Import File Guide</value>
+  </data>
+  <data name="AlternateJobPositonCanNotDefinedForOwnJobPositon" xml:space="preserve">
+    <value>Alternate Job Positon Can Not Defined For Own Job Positon</value>
+  </data>
+  <data name="SetTheDiagramPosition" xml:space="preserve">
+    <value>Set the diagram position with ctrl and mouse click</value>
+  </data>
+  <data name="StringLengthMessage" xml:space="preserve">
+    <value>String Length Message</value>
+  </data>
+  <data name="IsRequired" xml:space="preserve">
+    <value> is required</value>
+  </data>
+  <data name="NumberCannotBeRepetitive" xml:space="preserve">
+    <value>Number Cannot Be Repetitive</value>
+  </data>
+  <data name="ReturnValueIsOnlyAvailableAsTarget" xml:space="preserve">
+    <value>Return Value is only Available as Target</value>
+  </data>
+  <data name="ReturnValueIsOnlyAvailableInBody" xml:space="preserve">
+    <value>Return Value is only Available in Body</value>
+  </data>
+  <data name="TargetShouldBeReturnValueInLastBodyRow" xml:space="preserve">
+    <value>Target should be Return Value in Last Body Row</value>
+  </data>
+  <data name="ItemAlreadyExists" xml:space="preserve">
+    <value>Item Already Exists</value>
+  </data>
+  <data name="HrSentenceDetailIsRepetitive" xml:space="preserve">
+    <value>Sentence Detail Is Repetitive</value>
+  </data>
+  <data name="ThisSentenceCannotBeModifiedOrDeleted" xml:space="preserve">
+    <value>This Sentence Cannot be Modified or Deleted</value>
+  </data>
+  <data name="PostIsRepetitive" xml:space="preserve">
+    <value>Post is Repetitive</value>
+  </data>
+  <data name="ThereIsUnconfirmedSentenceForThisPersonnel" xml:space="preserve">
+    <value>There is Unconfirmed Sentence for this Personnel</value>
+  </data>
+  <data name="HrSentenceIsInGroup" xml:space="preserve">
+    <value>Sentence is in Group. Do You Want to Edit and Exclude It From Its Group?</value>
+  </data>
+  <data name="FromDateAndToDateNotSame" xml:space="preserve">
+    <value>From Date And To Date Not Same</value>
+  </data>
+  <data name="ErrorInTimeAttendanceRepository" xml:space="preserve">
+    <value>Error In TimeAttendance Repository</value>
+  </data>
+  <data name="InHourlyMissionYouCanNotSelectDetail" xml:space="preserve">
+    <value>In Hourly Mission You Can Not Select Detail</value>
+  </data>
+  <data name="StartDateTimeIsGreaterThanEndDateTime" xml:space="preserve">
+    <value>Start DateTime Is Greater Than EndDate Time</value>
+  </data>
+  <data name="PleaseSelectOneRow" xml:space="preserve">
+    <value>Please Select One Row</value>
+  </data>
+  <data name="PersonnelWorkGroupIsNotAllowdForShiftWorking" xml:space="preserve">
+    <value>Personnel WorkGroup Is Not Allowd For Shift Working</value>
+  </data>
+  <data name="AccessDeniedForThisAction" xml:space="preserve">
+    <value>Access Denied For This Action</value>
+  </data>
+  <data name="EndOfAllowRangeIsSmallerThanBeginOfAllowRange" xml:space="preserve">
+    <value>End Of Allow Range Is Smaller Than Begin Of Allow Range</value>
+  </data>
+  <data name="YourPasswordIsExpiredPleaseInsertNewPassword" xml:space="preserve">
+    <value>Your Password Is Expired Please Insert New Password</value>
+  </data>
+  <data name="PasswordExpiredIn1Days" xml:space="preserve">
+    <value>Password Expired In 1 Days</value>
+  </data>
+  <data name="PasswordExpiredIn2Days" xml:space="preserve">
+    <value>Password Expired In 2 Days</value>
+  </data>
+  <data name="PasswordExpiredIn3Days" xml:space="preserve">
+    <value>Password Expired In 3 Days</value>
+  </data>
+  <data name="PasswordExpiredIn0Days" xml:space="preserve">
+    <value>Your Password Expired Today</value>
+  </data>
+  <data name="YouCanNotSetOldPassword" xml:space="preserve">
+    <value>You Can Not Set Old Password</value>
+  </data>
+  <data name="YouHaveNotExtraWorkPermissionAccess" xml:space="preserve">
+    <value>You Have Not Extra Work Permission Access</value>
+  </data>
+  <data name="IsInvalid" xml:space="preserve">
+    <value>Is Invalid</value>
+  </data>
+  <data name="YouAreNotAuthenticatedToThisRequest" xml:space="preserve">
+    <value>You Are Not Authenticated To This Request</value>
+  </data>
+  <data name="YourLocationIsSavedAreYouSure" xml:space="preserve">
+    <value>Your Location Is Saved ,Are You Sure?</value>
+  </data>
+  <data name="RemainingTimeToSubmitRequest" xml:space="preserve">
+    <value>Remaining Time To Submit Request</value>
+  </data>
+  <data name="PictureIsRequired" xml:space="preserve">
+    <value>Picture Is Required</value>
+  </data>
+  <data name="AddMinimumOneRow" xml:space="preserve">
+    <value>Add Minimum One Row</value>
+  </data>
+  <data name="ShiftIsNotSelected" xml:space="preserve">
+    <value>Shift Is Not Selected</value>
+  </data>
+  <data name="MobileLockInformationNotAvailable" xml:space="preserve">
+    <value>Mobile Lock Information Not Available</value>
+  </data>
+  <data name="ANewVacationRequestIsRegistered" xml:space="preserve">
+    <value>A New Vacation Request is Registered</value>
+  </data>
+  <data name="AreYouSureForConfirmRequest" xml:space="preserve">
+    <value>Are You Sure For Confirm Request</value>
+  </data>
+  <data name="AreYouSureForRefuseRequest" xml:space="preserve">
+    <value>Are You Sure For Refuse Request?</value>
+  </data>
+  <data name="TodayIs0sBirthday" xml:space="preserve">
+    <value>Today Is 0s Birthday</value>
+  </data>
+  <data name="PleaseCallNetworkManager" xml:space="preserve">
+    <value>Please Call Network Manager</value>
+  </data>
+  <data name="AvgOfTransactionCountWithComparisonOfLastMonthPerDay" xml:space="preserve">
+    <value>Avg Of Transaction Count With Comparison Of Last Month</value>
+  </data>
+  <data name="AvgOfTransactionCountWithComparisonOfLastYearPerDay" xml:space="preserve">
+    <value>Avg Of Transaction Count With Comparison Of Last Year</value>
+  </data>
+  <data name="ForMoreInformationScanIt" xml:space="preserve">
+    <value>For More Information Scan It</value>
+  </data>
+  <data name="PleaseActivateTheSoftware" xml:space="preserve">
+    <value>Please Activate The Software</value>
+  </data>
+  <data name="ShareholderNotFound" xml:space="preserve">
+    <value>Shareholder Not Found</value>
+  </data>
+  <data name="SubmitedMorethan10RecordIsNotAllowd" xml:space="preserve">
+    <value>Submited More than 10 Record Is Not Allowd</value>
+  </data>
+  <data name="BBSCodeISNotValid" xml:space="preserve">
+    <value>BBS Code IS Not Valid</value>
+  </data>
+  <data name="UseBBSCodeAndCertNoForLogin" xml:space="preserve">
+    <value>Use BBS Code And Cert No For Login</value>
+  </data>
+  <data name="PleaseSelectCompany" xml:space="preserve">
+    <value>Please Select Company</value>
+  </data>
+  <data name="GiveIt" xml:space="preserve">
+    <value>Give It</value>
+  </data>
+  <data name="RecievingPaperToSubmitStockDepartment" xml:space="preserve">
+    <value>Recieving Paper To Submit Stock Department</value>
+  </data>
+  <data name="ForMoreInfoPleaseVisitThisPage" xml:space="preserve">
+    <value>For More Info Please Visit This Page</value>
+  </data>
+</root>

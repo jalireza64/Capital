@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#fff" />
+    <meta name="description" content="سیستم جامع حضور و غیاب شرکت علم و صنعت">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="~/content/icon512x512.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="~/content/icon192x192.png" />
+    <link href="~/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/styles/kendo.default-v2.min.css" rel="stylesheet" />
+    <link href="~/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="~/styles/kendo.default.mobile.min.css" rel="stylesheet" />
+    <link href="~/styles/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="~/content/fontAwsome/css/all.min.css" rel="stylesheet" />
+
+    <link href="~/ClientApp/assets/stimulsoft/css/stimulsoft.designer.office2013.whiteblue.css" rel="stylesheet" />
+    <link href="~/ClientApp/assets/stimulsoft/css/stimulsoft.viewer.office2013.whiteblue.css" rel="stylesheet" />
+
+    <!-- Stimusloft Reports.JS -->
+    <script src="~/ClientApp/assets/stimulsoft/scripts/stimulsoft.reports.js" type="text/javascript"></script>
+    <script src="~/ClientApp/assets/stimulsoft/scripts/stimulsoft.viewer.js" type="text/javascript"></script>
+    <script src="~/ClientApp/assets/stimulsoft/scripts/stimulsoft.designer.js" type="text/javascript"></script>
+
+    @{ 
+    #if (!DEBUG)
+        @<text><link href="~/dist/main.css" rel="stylesheet" /></text>
+    #endif
+    }
+
+    <title>ETS</title>
+    <style>
+        @@font-face {
+            font-family: "vazir";
+            src: local("/content/Vazir-FD-WOL"), url('/content/Vazir-FD-WOL.woff') format("woff");
+            font-weight: normal;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: "vazir";
+        }
+
+        input,
+        button,
+        select,
+        pre,
+        textarea {
+            font-family: "vazir";
+            font-size: inherit;
+        }
+
+        #splash-screen {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            color: white;
+        }
+
+            #splash-screen img {
+                width: 300px;
+            }
+
+            #splash-screen small {
+                display: flex;
+                align-items: center;
+            }
+    </style>
+</head>
+<body dir="rtl" class="k-rtl">
+    <div id="app-root">
+        <app-main>
+            <div id="splash-screen">
+                <img src="~/content/icon512x512.png" alt="لوگو">
+                <h1>
+                    سیستم جامع حضور و غیاب شرکت علم و صنعت
+                </h1>
+                <small>
+                    <i class='bx bx-loader bx-spin'></i>
+                    &nbsp;&nbsp;
+                    <span> در حال بارگذاری </span>
+                </small>
+            </div>
+        </app-main>
+    </div>
+    <script src="~/scripts/resourceManager.js" defer></script>
+    <script src="~/scripts/jquery.min.js" defer></script>
+    <script src="~/content/fontAwsome/js/all.js" defer></script>
+    <script src="~/dist/main.js" defer></script>
+</body>
+</html>

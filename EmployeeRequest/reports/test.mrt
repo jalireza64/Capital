@@ -1,0 +1,1549 @@
+{
+  "ReportVersion": "2018.1.6.0",
+  "ReportGuid": "9b823c3c98b94054ad3f072e3d03e2bb",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1588336743000+0430)/",
+  "ReportChanged": "/Date(1588420086977+0430)/",
+  "EngineVersion": "EngineV2",
+  "ReportUnit": "Inches",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "Company",
+        "Alias": "Company",
+        "Columns": {
+          "0": {
+            "Name": "address",
+            "Index": -1,
+            "NameInSource": "address",
+            "Alias": "address",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "bank_acc_desc",
+            "Index": -1,
+            "NameInSource": "bank_acc_desc",
+            "Alias": "bank_acc_desc",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "company_id",
+            "Index": -1,
+            "NameInSource": "company_id",
+            "Alias": "company_id",
+            "Type": "System.Double"
+          },
+          "3": {
+            "Name": "company_name",
+            "Index": -1,
+            "NameInSource": "company_name",
+            "Alias": "company_name",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "end_date",
+            "Index": -1,
+            "NameInSource": "end_date",
+            "Alias": "end_date",
+            "Type": "System.DateTime"
+          },
+          "5": {
+            "Name": "national_code",
+            "Index": -1,
+            "NameInSource": "national_code",
+            "Alias": "national_code",
+            "Type": "System.Double"
+          },
+          "6": {
+            "Name": "postal_code",
+            "Index": -1,
+            "NameInSource": "postal_code",
+            "Alias": "postal_code",
+            "Type": "System.Double"
+          },
+          "7": {
+            "Name": "reg_no",
+            "Index": -1,
+            "NameInSource": "reg_no",
+            "Alias": "reg_no",
+            "Type": "System.Double"
+          },
+          "8": {
+            "Name": "tel",
+            "Index": -1,
+            "NameInSource": "tel",
+            "Alias": "tel",
+            "Type": "System.Double"
+          },
+          "9": {
+            "Name": "cap_percent",
+            "Index": -1,
+            "NameInSource": "cap_percent",
+            "Alias": "cap_percent",
+            "Type": "System.String"
+          },
+          "10": {
+            "Name": "pre_cap_amnt",
+            "Index": -1,
+            "NameInSource": "pre_cap_amnt",
+            "Alias": "pre_cap_amnt",
+            "Type": "System.Double"
+          },
+          "11": {
+            "Name": "cap_amnt",
+            "Index": -1,
+            "NameInSource": "cap_amnt",
+            "Alias": "cap_amnt",
+            "Type": "System.Double"
+          },
+          "12": {
+            "Name": "share_amnt",
+            "Index": -1,
+            "NameInSource": "share_amnt",
+            "Alias": "share_amnt",
+            "Type": "System.Double"
+          }
+        },
+        "NameInSource": "Sample.Company"
+      },
+      "1": {
+        "Ident": "StiDataTableSource",
+        "Name": "Shareholder",
+        "Alias": "Shareholder",
+        "Columns": {
+          "0": {
+            "Name": "shrh_code",
+            "Index": -1,
+            "NameInSource": "shrh_code",
+            "Alias": "shrh_code",
+            "Type": "System.Double"
+          },
+          "1": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "surname",
+            "Index": -1,
+            "NameInSource": "surname",
+            "Alias": "surname",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "father",
+            "Index": -1,
+            "NameInSource": "father",
+            "Alias": "father",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "cert_no",
+            "Index": -1,
+            "NameInSource": "cert_no",
+            "Alias": "cert_no",
+            "Type": "System.Double"
+          },
+          "5": {
+            "Name": "natcode",
+            "Index": -1,
+            "NameInSource": "natcode",
+            "Alias": "natcode",
+            "Type": "System.Double"
+          },
+          "6": {
+            "Name": "bbs_code",
+            "Index": -1,
+            "NameInSource": "bbs_code",
+            "Alias": "bbs_code",
+            "Type": "System.String"
+          },
+          "7": {
+            "Name": "address",
+            "Index": -1,
+            "NameInSource": "address",
+            "Alias": "address",
+            "Type": "System.String"
+          },
+          "8": {
+            "Name": "mobile",
+            "Index": -1,
+            "NameInSource": "mobile",
+            "Alias": "mobile",
+            "Type": "System.Double"
+          },
+          "9": {
+            "Name": "share",
+            "Index": -1,
+            "NameInSource": "share",
+            "Alias": "share",
+            "Type": "System.Double"
+          },
+          "10": {
+            "Name": "postal_code",
+            "Index": -1,
+            "NameInSource": "postal_code",
+            "Alias": "postal_code",
+            "Type": "System.Double"
+          },
+          "11": {
+            "Name": "share_type",
+            "Index": -1,
+            "NameInSource": "share_type",
+            "Alias": "share_type",
+            "Type": "System.String"
+          },
+          "12": {
+            "Name": "spri_qunt",
+            "Index": -1,
+            "NameInSource": "spri_qunt",
+            "Alias": "spri_qunt",
+            "Type": "System.Double"
+          },
+          "13": {
+            "Name": "spri_amnt",
+            "Index": -1,
+            "NameInSource": "spri_amnt",
+            "Alias": "spri_amnt",
+            "Type": "System.Double"
+          },
+          "14": {
+            "Name": "credit_amnt",
+            "Index": -1,
+            "NameInSource": "credit_amnt",
+            "Alias": "credit_amnt",
+            "Type": "System.Double"
+          },
+          "15": {
+            "Name": "pay_amnt",
+            "Index": -1,
+            "NameInSource": "pay_amnt",
+            "Alias": "pay_amnt",
+            "Type": "System.Double"
+          }
+        },
+        "NameInSource": "Sample.Shareholder"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiJsonDatabase",
+        "Name": "Sample",
+        "Alias": "Sample",
+        "PathData": "C:\\WorkSpaces\\EtsProject\\Source\\Ets\\EmployeeRequest\\EmployeeRequest\\reports\\Sample.json"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "5575f746d09d45c5b5641680085b4512",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiText",
+          "Name": "Text1",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "2.7,0,2.7,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "گواهینامه حق تقدم خرید سهام"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;12;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "1": {
+          "Ident": "StiText",
+          "Name": "Text2",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "2.7,0.4,2.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Company.company_name}"
+          },
+          "HorAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black"
+        },
+        "2": {
+          "Ident": "StiText",
+          "Name": "Text3",
+          "Guid": "f1411babaef24a3f816026d948f8b6d0",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,0.7,4.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "ثبت شده به شماره {Company.reg_no} و شناسه ملی {Company.national_code}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "3": {
+          "Ident": "StiText",
+          "Name": "Text4",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0,1.2,7.7,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "نشانی شرکت: {Company.address}   کد پستی: {Company.postal_code}   تلفن: {Company.tel}"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "4": {
+          "Ident": "StiText",
+          "Name": "Text5",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0,1.6,7.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "سهامدار محترم: {Shareholder.name} {Shareholder.surname}"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "5": {
+          "Ident": "StiText",
+          "Name": "Text6",
+          "Guid": "600e58aad0e14a0b835744d909df8edf",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4,1.9,3.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "نشانی: {Shareholder.address}"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "6": {
+          "Ident": "StiText",
+          "Name": "Text7",
+          "Guid": "5bfeab9d1d894ce19dd9eb4353f414f4",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0,1.9,3.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "کد پستی: {Shareholder.postal_code}"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "7": {
+          "Ident": "StiText",
+          "Name": "Text8",
+          "Guid": "300877196f1b46a8822d7968fa762a21",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0,2.4,7.7,0.9",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "پیرو اطلاعیه عمومی مندرج در روزنامه اطلاعات مورخ 1398/12/12 و در اجرای مصوبه مجمع عمومی فوق العاده صاحبان سهام مورخ 1398/12/10 و مجوز شماره 12/12435 سازمان بورس و اوراق بهادار سرمایه شرکت از مبلغ {Company.pre_cap_amnt} ریال به مبلغ {Company.cap_amnt} ریال (به ازای هر سهم {Company.cap_percent}) افزایش می یابد. در اجرای مفاد 170 و 171 لایحه اصلاحی قانون تجارت بدین وسیله گواهی نامه حق تقدم خرید سهام جهت اطلاع ارسال میگردد. خواهشمند است فرم مندرج در ذیل برگه را با شرایط ذیل تکمیل و به آدرس شرکت ارسال فرمایید. "
+          },
+          "HorAlignment": "Right",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "TextOptions": {
+            "WordWrap": true
+          },
+          "Type": "Expression"
+        },
+        "8": {
+          "Ident": "StiShape",
+          "Name": "Shape1",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,3.8,6.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "9": {
+          "Ident": "StiText",
+          "Name": "Text9",
+          "Guid": "2b404a1574b0453c89a00b95d9e76331",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,3.5,6.7,0.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "گواهینامه حق تقدم خرید سهام"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;12;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "10": {
+          "Ident": "StiShape",
+          "Name": "Shape2",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.1,6.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "11": {
+          "Ident": "StiShape",
+          "Name": "Shape3",
+          "Guid": "d80324aa69474cf1a198032ce970a148",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.2,6.7,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "12": {
+          "Ident": "StiShape",
+          "Name": "Shape4",
+          "Guid": "3a256cb5b2bb4ceebe3c2f3feb84e259",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,5,6.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "13": {
+          "Ident": "StiShape",
+          "Name": "Shape5",
+          "Guid": "2bad9ceb548d4307898b678c928e2cc8",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.5,6.7,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "14": {
+          "Ident": "StiShape",
+          "Name": "Shape6",
+          "Guid": "7c914baa725f412888d55786c7c98309",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,5.1,6.7,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiHorizontalLineShapeType"
+          }
+        },
+        "15": {
+          "Ident": "StiShape",
+          "Name": "Shape7",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,3.9,0.4,1.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiVerticalLineShapeType"
+          }
+        },
+        "16": {
+          "Ident": "StiShape",
+          "Name": "Shape8",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "6.9,3.9,0.1,1.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiVerticalLineShapeType"
+          }
+        },
+        "17": {
+          "Ident": "StiShape",
+          "Name": "Shape9",
+          "Guid": "a01a937a01c245069a18567b2e7a4661",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.8,3.9,0.1,1.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiVerticalLineShapeType"
+          }
+        },
+        "18": {
+          "Ident": "StiShape",
+          "Name": "Shape10",
+          "Guid": "1c3ec8adfe654fd9a24e3ae8dd1eede7",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.3,3.9,0.1,1.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiVerticalLineShapeType"
+          }
+        },
+        "19": {
+          "Ident": "StiShape",
+          "Name": "Shape11",
+          "Guid": "20ee38f1e3f74fbfa0155af68615a088",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.8,3.9,0.1,1.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Brush": "solid:",
+          "ShapeType": {
+            "Ident": "StiVerticalLineShapeType"
+          }
+        },
+        "20": {
+          "Ident": "StiText",
+          "Name": "Text10",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,3.9,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "1"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "21": {
+          "Ident": "StiText",
+          "Name": "Text11",
+          "Guid": "e3c1f7a14f0c49a784f645a2fd3b41d3",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,4.2,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "2"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "22": {
+          "Ident": "StiText",
+          "Name": "Text12",
+          "Guid": "35039ab0b597474bb79bfb105e0cef72",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,4.5,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "3"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "23": {
+          "Ident": "StiText",
+          "Name": "Text13",
+          "Guid": "ce3ea8748a75424182d63ae5fc4ccf36",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,4.8,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "4"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "24": {
+          "Ident": "StiText",
+          "Name": "Text14",
+          "Guid": "d1e59cd474fe4eed80beba09d9b90d86",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,5.1,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "5"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "25": {
+          "Ident": "StiText",
+          "Name": "Text15",
+          "Guid": "2fc9f7141e5147c3b59a445442159f1c",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7,5.4,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "6"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "26": {
+          "Ident": "StiText",
+          "Name": "Text16",
+          "Guid": "549f16f4bec14efa93f2a6e1174a83a8",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,3.9,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "7"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "27": {
+          "Ident": "StiText",
+          "Name": "Text17",
+          "Guid": "27af6cdda8464c49afb6c8686e1813c0",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,4.2,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "8"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "28": {
+          "Ident": "StiText",
+          "Name": "Text18",
+          "Guid": "8586179ac4b54308aafb6ef7b63fd986",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,4.5,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "9"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "29": {
+          "Ident": "StiText",
+          "Name": "Text19",
+          "Guid": "f4181051072548a7bfbee63f3a2f3d42",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,4.8,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "10"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "30": {
+          "Ident": "StiText",
+          "Name": "Text20",
+          "Guid": "2f16424703e34e98b0143a2f4c76a72b",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,5.1,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "11"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "31": {
+          "Ident": "StiText",
+          "Name": "Text21",
+          "Guid": "07c199bdbd904677b6533201938c0487",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.9,5.4,0.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "12"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "32": {
+          "Ident": "StiText",
+          "Name": "Text22",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,3.9,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "شماره سهامداری"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "33": {
+          "Ident": "StiText",
+          "Name": "Text23",
+          "Guid": "7bf18fa13a67488397909cd330edda59",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,4.2,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "کد سهامداری"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "34": {
+          "Ident": "StiText",
+          "Name": "Text24",
+          "Guid": "a9d78e2cd2544e0189126858cada9051",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,4.5,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مبلغ فعلی سرمایه شرکت"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "35": {
+          "Ident": "StiText",
+          "Name": "Text25",
+          "Guid": "3896345412884551a228043a02bd548f",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,4.8,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مبلغ افزایش سرمایه"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "36": {
+          "Ident": "StiText",
+          "Name": "Text26",
+          "Guid": "4724a18da14d42b8b2cad399636e408d",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,5.1,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مبلغ سرمایه جدید"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "37": {
+          "Ident": "StiText",
+          "Name": "Text27",
+          "Guid": "91ebc8f4dc4a42c8b9a0f6564d8b4967",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "5.4,5.4,1.5,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "ارزش اسمی هر سهم"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "38": {
+          "Ident": "StiText",
+          "Name": "Text28",
+          "Guid": "e0105c7f2a1a4be1bb4510d7b6af0495",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,3.9,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "نوع سهم"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "39": {
+          "Ident": "StiText",
+          "Name": "Text29",
+          "Guid": "9e9fa34f6d45461e87c4ffce5987661d",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,4.2,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "تعداد سهام فعلی"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "40": {
+          "Ident": "StiText",
+          "Name": "Text30",
+          "Guid": "f8dbb968781f4625a981e88fd9f12a9e",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,4.5,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "تعداد حق تقدم سهام قابل استفاده"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "41": {
+          "Ident": "StiText",
+          "Name": "Text31",
+          "Guid": "0b00c4025b844331bec72b3748ed1c02",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,4.8,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مبلغ حق تقدم سهام قابل استفاده"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "42": {
+          "Ident": "StiText",
+          "Name": "Text32",
+          "Guid": "4a9103a891324bcfa6df12e6a7b397f9",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,5.1,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مطالبات حال شده سهامداران"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "43": {
+          "Ident": "StiText",
+          "Name": "Text33",
+          "Guid": "30f0790bde234999ac0d05a05c67ffc3",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.9,5.4,1.9,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مبلغ قابل واریز توسط سهامدار"
+          },
+          "HorAlignment": "Right",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "44": {
+          "Ident": "StiText",
+          "Name": "Text34",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4.1,3.9,1.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Shareholder.shrh_code}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black"
+        },
+        "45": {
+          "Ident": "StiText",
+          "Name": "Text35",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4.1,4.2,1.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Shareholder.bbs_code}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black"
+        },
+        "46": {
+          "Ident": "StiText",
+          "Name": "Text36",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4.1,4.5,1.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\", Company.pre_cap_amnt)}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "47": {
+          "Ident": "StiText",
+          "Name": "Text37",
+          "Guid": "eecf8cb8c02b49079ccc231b2b15a22e",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4.1,5.1,1.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\", Company.cap_amnt)}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "48": {
+          "Ident": "StiText",
+          "Name": "Text38",
+          "Guid": "6cc605736c474d00ba1059600085d960",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4.1,5.4,1.2,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\", Company.share_amnt)}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "49": {
+          "Ident": "StiText",
+          "Name": "Text39",
+          "Guid": "723a323e14b541ddac969ea047d73089",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,3.9,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Shareholder.share_type}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "50": {
+          "Ident": "StiText",
+          "Name": "Text40",
+          "Guid": "9bb603a80f4a4adc8159ad5fd1cf1886",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.2,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\",Shareholder.share )}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "51": {
+          "Ident": "StiText",
+          "Name": "Text41",
+          "Guid": "5a35fb56d2dc49b88c326397eb043bb9",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.5,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\",Shareholder.spri_qunt )}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "52": {
+          "Ident": "StiText",
+          "Name": "Text42",
+          "Guid": "6a01a7ce6083453dbb7a9639d930ba4e",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,4.8,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\",Shareholder.spri_amnt )}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "53": {
+          "Ident": "StiText",
+          "Name": "Text43",
+          "Guid": "37cb93480e3447d482c6fc7d40ddc264",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,5.1,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\",Shareholder.credit_amnt )}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "54": {
+          "Ident": "StiText",
+          "Name": "Text44",
+          "Guid": "25842c56cbd8498ca35dc96cc43b184a",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,5.4,1.3,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "{Format(\"{0:N2}\",Shareholder.pay_amnt )}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "55": {
+          "Ident": "StiText",
+          "Name": "Text45",
+          "Guid": "c25bc075c9bc4882ba343edbdd4b9373",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,5.9,6.7,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مشخصات حساب بانکی: {Company.bank_acc_desc}"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "56": {
+          "Ident": "StiText",
+          "Name": "Text46",
+          "Guid": "1f002dce10ba4a5280e87d4bac88abc9",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0,6.6,7.7,0.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مهلت استفاده از حق تقدم تا پایان روز 1398/03/01 بوده و عدم استفاده از آن در مهلت مقرر به منزله انصراف می باشد"
+          },
+          "HorAlignment": "Right",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "TextOptions": {
+            "WordWrap": true
+          },
+          "Type": "Expression"
+        },
+        "57": {
+          "Ident": "StiText",
+          "Name": "Text47",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "6.8,9.5,1.3,0.1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مدیر عامل"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "58": {
+          "Ident": "StiText",
+          "Name": "Text48",
+          "Guid": "e4a8deb90cf543b19563d27113ea3ea2",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "4,9.5,1.3,0.1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "رئیس هیئت مدیره"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "59": {
+          "Ident": "StiText",
+          "Name": "Text49",
+          "Guid": "f9030332ff994cb88986f937fa942f67",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "1.3,9.5,1.3,0.1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "مهر شرکت"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": "B Yekan;10;;",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "TextBrush": "solid:Black",
+          "Type": "Expression"
+        },
+        "60": {
+          "Ident": "StiImage",
+          "Name": "Image1",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "6.2,9,1.5,1.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Stretch": true,
+          "File": "E:\\Last Server\\Server E\\Datik Letter\\Emza_Datik\\Alireza_jafari.png"
+        },
+        "61": {
+          "Ident": "StiImage",
+          "Name": "Image2",
+          "Guid": "521ab3e73eac4ceaa688d2df2af5e68d",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "3.5,9,1.5,1.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Stretch": true,
+          "File": "E:\\Last Server\\Server E\\Datik Letter\\Emza_Datik\\Salar_Kavandi_Forosh.png"
+        },
+        "62": {
+          "Ident": "StiImage",
+          "Name": "Image3",
+          "Guid": "afb5744bf3d2482eb05e9595df8de3fa",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.4,8.8,1.3,1.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Stretch": true,
+          "File": "E:\\Last Server\\Server E\\Datik Letter\\Emza_Datik\\mohr.png"
+        },
+        "63": {
+          "Ident": "StiRectanglePrimitive",
+          "Name": "RectanglePrimitive1",
+          "Guid": "de6f468986864650814350bae88139e2",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,3.5,6.7,2.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          }
+        },
+        "64": {
+          "Ident": "StiStartPointPrimitive",
+          "Name": "StartPointPrimitive1",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "0.5,3.5,0,0",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "ReferenceToGuid": "de6f468986864650814350bae88139e2"
+        },
+        "65": {
+          "Ident": "StiEndPointPrimitive",
+          "Name": "EndPointPrimitive1",
+          "MinSize": "0,0",
+          "MaxSize": "0,0",
+          "ClientRectangle": "7.2,5.7,0,0",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "ReferenceToGuid": "de6f468986864650814350bae88139e2"
+        }
+      },
+      "RightToLeft": true,
+      "PaperSize": "Letter",
+      "PageWidth": 8.5,
+      "PageHeight": 11.0,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0",
+        "RightToLeft": true,
+        "ImageTransparency": 161,
+        "ImageStretch": true,
+        "ImageBytes": "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"
+      },
+      "Margins": {
+        "Left": 0.39,
+        "Right": 0.39,
+        "Top": 0.39,
+        "Bottom": 0.39
+      },
+      "ReportUnit": {
+        "Ident": "StiInchesUnit"
+      }
+    }
+  }
+}
